@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head/meta.html")
+    @@include("partials/head/head-links.html")
+    <title>ASBD | About Us</title>
+  </head>
+
+  <body>
+    @@include("partials/navbar.html", { "classList": "navbar-light w-100" })
+
+    <main>
+      <!-- Page header -->
+      <section class="py-5 py-lg-8">
+        <div class="text-center mb-4">
+          <h2 class="display-5 fw-bold">About ASBD</h2>
+          <p class="lead">Designing impact. Building identity. Signage that speaks for your brand.</p>
+        </div>
+      </section>
+
+      <section class="mb-xl-9">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="mb-6">
+                     <h1 class="mb-0">A Quality Sign Says It All</h1>
+                  </div>
+               </div>
+            </div>
+
+      <!-- About / Contact / Image Section -->
+      <section class="mb-xl-9">
+        <div class="container">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-7 col-md-12">
+              <img src="./assets/images/Home_Priority/1.jpg" class="img-fluid rounded-3 shadow-sm" alt="Owner-ASBD" />
+            </div>
+            <div class="col-lg-5 col-md-12">
+              <!-- Location -->
+              <div class="d-flex mb-4">
+                <div class="icon-md icon-shape rounded-circle bg-body-tertiary bg-opacity-50 border flex-shrink-0 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="ms-3">
+                  <h5>Location</h5>
+                  <p class="mb-0">501 W. Noble Street, Lebanon, IN 46052</p>
+                </div>
+              </div>
+
+              <!-- Business Hours -->
+              <div class="d-flex border-top pt-4 mb-4">
+                <div class="icon-md icon-shape rounded-circle bg-body-tertiary bg-opacity-50 border flex-shrink-0 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-window-dock"></i>
+                </div>
+                <div class="ms-3">
+                  <h5>Business Hours</h5>
+                  <p class="mb-0">Monday – Friday: 8:00 AM – 5:00 PM<br>Saturday – Sunday: Closed</p>
+                </div>
+              </div>
+
+              <!-- Contact -->
+              <div class="d-flex border-top pt-4">
+                <div class="icon-md icon-shape rounded-circle bg-body-tertiary bg-opacity-50 border flex-shrink-0 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div class="ms-3">
+                  <h5>Contact</h5>
+                  <p class="mb-1">Phone: <a href="tel:3178767900" class="text-decoration-none">317.876.7900</a></p>
+                  <p class="mb-0">Email: <a href="mailto:sales@asignbydesign.com" class="text-decoration-none">sales@asignbydesign.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Company Story -->
+          <div class="row mt-7">
+            <div class="col-lg-7 col-md-12">
+              <div class="mb-6 mt-4">
+                <h2 class="mb-4">About</h2>
+                <p class="mb-3">
+                  A Sign By Design is a full service commercial sign company that takes a client’s idea for a sign, creates it, navigates the legal system for approval, then manufactures and installs it.
+                  <br><br>
+                  When Beverly Miller founded A Sign By Design in 1988, she certainly didn’t imagine that it would be where it is today.
+                  <br><br>
+                  At the time, the only options available to illuminate signage were fluorescent or neon. In an attempt to keep up with technology and to protect the environment, today, A Sign By Design uses LED lighting in over 95% of their signs. In addition to being low voltage, LED lighting is also low maintenance which makes our customers satisfied and happy.
+                  <br><br>
+                  In 2010, A Sign By Design was ranked third in Indianapolis Business Journal’s book of lists in the sign industry category. Also in 2010, the Indianapolis Business Journal included A Sign By Design in their top 25 women owned businesses.
+                  <br><br>
+                  In over 23 years of operation, A Sign By Design signs have landscaped the city of Indianapolis. They identify the products and services that you use on a daily basis. At the airport, the RCA sign “Welcomes You to Indianapolis.” The Community Hospital sign directs you to the emergency room or to your doctor’s office. Your view from your seat at Victory Field provides an illuminated roster of our clients; Courtyard by Marriott, Duke Realty, the Hoosier Lottery and Key Bank.
+                  <br><br>
+                  We have expanded our operations by manufacturing and installing signs across the country as far as California. Lincoln Technical Institute, Verizon Wireless as well as Amazon Fulfillment signs appear in over 15 states.
+                  <br><br>
+                </p>
+                <p class="mb-0">And it all began in a spare room with a telephone and a fax machine and a desire to succeed.</p>
+              </div>
+            </div>
+
+            <!-- Quote Form -->
+            <div class="col-lg-4 offset-lg-1 col-md-12">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="mb-6 text-center">
+                    <h3 class="mb-0">Reach out today to learn more about what we can do for you.</h3>
+                  </div>
+
+                  <form class="needs-validation mb-4"
+                        action="https://formsubmit.co/sales@asignbydesign.com"
+                        method="POST"
+                        novalidate>
+
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://asignbydesign.com/thank-you.html">
+                    <input type="text" name="_honey" style="display:none">
+
+                    <div class="mb-3">
+                      <label for="quoteFullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="quoteFullName" name="name" required />
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="quoteCompany" class="form-label">Company Name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="quoteCompany" name="company" required />
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="quoteEmail" class="form-label">Email <span class="text-danger">*</span></label>
+                      <input type="email" class="form-control" id="quoteEmail" name="email" required />
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="quotePhone" class="form-label">Phone Number (optional)</label>
+                      <input type="tel" class="form-control" id="quotePhone" name="phone" />
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="quoteType" class="form-label">Type of Sign Needed <span class="text-danger">*</span></label>
+                      <select class="form-select" id="quoteType" name="sign_type" required>
+                        <option value="" disabled selected>Select a sign type</option>
+                        <option>Awnings</option>
+                        <option>Channel Letters</option>
+                        <option>Custom Sign</option>
+                        <option>Interior</option>
+                        <option>Monument</option>
+                        <option>Pylon</option>
+                        <option>Wayfinding</option>
+                        <option>Not Sure</option>
+                      </select>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="quoteDetails" class="form-label">Project Details (optional)</label>
+                      <textarea class="form-control" id="quoteDetails" name="message" rows="4"
+                        placeholder="Tell us about the location, size, timeline, and any other info..."></textarea>
+                    </div>
+
+                    <!-- reCAPTCHA -->
+                    <div class="d-flex justify-content-center mb-3">
+                      <div class="g-recaptcha" data-sitekey="your_site_key_here"></div>
+                    </div>
+
+                    <div class="d-grid">
+                      <button class="btn btn-primary" type="submit">Submit Quote Request</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include("partials/footer.html")
+    @@include("partials/scripts.html")
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const forms = document.querySelectorAll("form");
+
+    forms.forEach(form => {
+      form.addEventListener("submit", function (e) {
+        const emailInput = form.querySelector("input[type='email']");
+        const email = emailInput?.value.trim();
+        const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+        if (!isValid) {
+          e.preventDefault();
+          emailInput.classList.add("is-invalid");
+          emailInput.focus();
+        } else {
+          emailInput.classList.remove("is-invalid");
+        }
+      });
+    });
+  });
+</script>
+
+  </body>
+</html>

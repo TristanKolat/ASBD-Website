@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta + Styles -->
+  @@include("partials/head/meta.html")
+  @@include("partials/head/head-links.html")
+  <title>ASBD | A Sign by Design</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  @@include("partials/navbar.html", { "classList": "navbar-light w-100" })
+
+  <!-- === Gallery Tab Reset Fix === -->
+  <script>
+    document.querySelectorAll('a.dropdown-item[href^="gallery.html#"]').forEach(link => {
+      link.addEventListener('click', function () {
+        this.blur();
+        setTimeout(() => {
+          if (window.location.pathname.includes('index.html')) {
+            history.replaceState(null, "", window.location.pathname);
+          }
+        }, 1000);
+      });
+    });
+  </script>
+
+  <main>
+    <!-- === Page Header === -->
+    <section class="container pt-2 pb-1" data-cue="fadeIn">
+      <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-10 col-12" data-cues="zoomIn" data-group="page-title" data-delay="700">
+          <div class="text-center d-flex flex-column gap-4">
+            <div class="d-flex flex-column gap-3 mx-lg-8">
+              <h1 class="mb-0 display-5">A Sign by Design</h1>
+              <p class="mb-0 lead text-danger">A Quality Sign Says It All</p>
+            </div>
+            <div class="d-flex flex-row gap-2 justify-content-center">
+              <a href="./quote.html" class="btn btn-primary" target="_blank">Get Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === Scrolling Image Marquees === -->
+    @@include("partials/home/marquee.html")
+
+    <!-- === Process Steps === -->
+    @@include("partials/home/process-home.html")
+
+    <!-- === Gallery Categories === -->
+    @@include("partials/home/gallery-links.html")
+
+    <!-- === Company Mission Statement === -->
+    @@include("partials/home/mission.html")
+
+    <!-- === Testimonials === -->
+    @@include("partials/home/testimonials.html")
+
+    <!-- === Call to Action Form === -->
+    @@include("partials/home/cta.html")
+  </main>
+
+  <!-- Footer + Scripts -->
+  @@include("partials/footer.html")
+  @@include("partials/btn-scroll-top.html")
+  @@include("partials/scripts.html")
+
+  <!-- === External Libraries === -->
+  <script src="@@webRoot/node_modules/scrollcue/scrollCue.min.js"></script>
+  <script src="@@webRoot/assets/js/vendors/scrollcue.js"></script>
+  <script src="@@webRoot/node_modules/swiper/swiper-bundle.min.js"></script>
+  <script src="@@webRoot/assets/js/vendors/swiper.js"></script>
+
+  <!-- === Shuffle Home Marquee Images === -->
+  <script>
+    function shuffleChildren(container) {
+      const children = Array.from(container.children);
+      for (let i = children.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [children[i], children[j]] = [children[j], children[i]];
+      }
+      children.forEach(child => container.appendChild(child));
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      shuffleChildren(document.querySelector(".track"));
+      shuffleChildren(document.querySelector(".track-2"));
+    });
+  </script>
+
+  <!-- === Swiper Slider (Testimonials) === -->
+  <script>
+    const testimonialSwiper = new Swiper('.testimonial-swiper', {
+      loop: true,
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      spaceBetween: 40,
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 150,
+        modifier: 2,
+        slideShadows: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+
+    const swiperContainer = document.querySelector('.testimonial-swiper');
+    swiperContainer.addEventListener('mouseenter', () => testimonialSwiper.autoplay.stop());
+    swiperContainer.addEventListener('mouseleave', () => testimonialSwiper.autoplay.start());
+  </script>
+
+  <!-- === Email Validation for All Forms === -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const forms = document.querySelectorAll("form");
+
+      forms.forEach(form => {
+        form.addEventListener("submit", function (e) {
+          const emailInput = form.querySelector("input[type='email']");
+          const email = emailInput?.value.trim();
+          const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+          const feedback = emailInput?.closest('div')?.querySelector('.invalid-feedback');
+
+          if (!isValid) {
+            e.preventDefault();
+            emailInput.classList.add("is-invalid");
+            if (feedback) feedback.textContent = "Please enter a valid email address.";
+            emailInput.focus();
+          } else {
+            emailInput.classList.remove("is-invalid");
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
