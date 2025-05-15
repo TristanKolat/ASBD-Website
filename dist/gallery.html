@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+
+<head>
+  <!-- Required meta tags -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Favicon icon-->
+  <!-- Favicon icon-->
 <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
@@ -31,43 +32,45 @@
 <!-- Theme CSS -->
 <link rel="stylesheet" href="./assets/css/theme.min.css">
 
-    <title>ASBD | Portfolio</title>
-    <style>
-      .masonry {
-        column-count: 3;
-        column-gap: 1rem;
-      }
-      @media (max-width: 992px) {
-        .masonry {
-          column-count: 2;
-        }
-      }
-      @media (max-width: 576px) {
-        .masonry {
-          column-count: 1;
-        }
-      }
-      .masonry-item {
-        break-inside: avoid;
-        margin-bottom: 1rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .masonry-item:hover {
-        transform: scale(1.02);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      }
-      .masonry-item img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 0.75rem;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      }
-    </style>
-  </head>
+  <title>ASBD | Portfolio</title>
 
-  <body>
-    <!-- Navbar -->
+  <!-- Temporary Page-specific Styling: Will be extracted into external CSS -->
+  <style>
+    .masonry {
+      column-count: 3;
+      column-gap: 1rem;
+    }
+    @media (max-width: 992px) {
+      .masonry {
+        column-count: 2;
+      }
+    }
+    @media (max-width: 576px) {
+      .masonry {
+        column-count: 1;
+      }
+    }
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .masonry-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    .masonry-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
 <header>
   <nav class="navbar navbar-expand-lg navbar-light w-100">
     <div class="container px-3">
@@ -140,87 +143,60 @@
 
  
 
-    <main>
-      <!--<div class="pattern-square"></div>-->
 
-      <!-- Page header -->
-      <section class="py-5 py-lg-8">
-        <div class="text-center mb-4">
-          <h2 class="display-5 fw-bold">Our Work</h2>
-          <p class="lead">Explore our gallery by category</p>
-        </div>
-      </section>
+  <main>
+    <!-- Page Header -->
+    <section class="py-5 py-lg-8 text-center">
+      <div class="mb-4">
+        <h2 class="display-5 fw-bold">Our Work</h2>
+        <p class="lead">Explore our gallery by category</p>
+      </div>
+    </section>
 
-      <!-- Portfolio Tabs + Content -->
-      <section class="py-5">
-        <div class="container">
+    <!-- Gallery Tabs + Content -->
+    <section class="py-5">
+      <div class="container">
 
-          <!-- Tabs -->
-          <ul class="nav nav-tabs justify-content-center mb-4" id="portfolioTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">All</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#awnings" type="button" role="tab">Awnings</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#channel" type="button" role="tab">Channel Letters</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#custom" type="button" role="tab">Custom</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#graphics" type="button" role="tab">Graphics</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#interior" type="button" role="tab">Interior</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#monuments" type="button" role="tab">Monuments</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#pylons" type="button" role="tab">Pylons</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#wayfinding" type="button" role="tab">Wayfinding</button>
-            </li>
-          </ul>
+        <!-- Bootstrap Nav Tabs -->
+        <ul class="nav nav-tabs justify-content-center mb-4" id="portfolioTabs" role="tablist">
+          <!-- Tab items -->
+          <!-- Note: The 'data-bs-target' must match the corresponding tab pane id -->
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">All</button>
+          </li>
+          <!-- Category tabs -->
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#awnings" type="button" role="tab">Awnings</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#channel" type="button" role="tab">Channel Letters</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#custom" type="button" role="tab">Custom</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#graphics" type="button" role="tab">Graphics</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#interior" type="button" role="tab">Interior</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#monuments" type="button" role="tab">Monuments</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#pylons" type="button" role="tab">Pylons</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#wayfinding" type="button" role="tab">Wayfinding</button></li>
+        </ul>
 
-          <!-- Tab Panes -->
-          <div class="tab-content">
-            <div class="tab-pane fade show active" id="all" role="tabpanel">
-              <div class="masonry" id="all-gallery"></div>
-            </div>
-            <div class="tab-pane fade" id="awnings" role="tabpanel">
-              <div class="masonry" data-gallery="awnings"></div>
-            </div>
-            <div class="tab-pane fade" id="channel" role="tabpanel">
-              <div class="masonry" data-gallery="channel"></div>
-            </div>
-            <div class="tab-pane fade" id="custom" role="tabpanel">
-              <div class="masonry" data-gallery="custom"></div>
-            </div>
-            <div class="tab-pane fade" id="graphics" role="tabpanel">
-              <div class="masonry" data-gallery="graphics"></div>
-            </div>
-            <div class="tab-pane fade" id="interior" role="tabpanel">
-              <div class="masonry" data-gallery="interior"></div>
-            </div>
-            <div class="tab-pane fade" id="monuments" role="tabpanel">
-              <div class="masonry" data-gallery="monuments"></div>
-            </div>
-            <div class="tab-pane fade" id="pylons" role="tabpanel">
-              <div class="masonry" data-gallery="pylons"></div>
-            </div>
-            <div class="tab-pane fade" id="wayfinding" role="tabpanel">
-              <div class="masonry" data-gallery="wayfinding"></div>
-            </div>
+        <!-- Gallery Content Panes -->
+        <div class="tab-content">
+          <!-- All images (combined random selection) -->
+          <div class="tab-pane fade show active" id="all" role="tabpanel">
+            <div class="masonry" id="all-gallery"></div>
           </div>
-        </div>
-      </section>
-    </main>
 
-    <!-- Footer -->
+          <!-- Individual categories -->
+          <div class="tab-pane fade" id="awnings" role="tabpanel"><div class="masonry" data-gallery="awnings"></div></div>
+          <div class="tab-pane fade" id="channel" role="tabpanel"><div class="masonry" data-gallery="channel"></div></div>
+          <div class="tab-pane fade" id="custom" role="tabpanel"><div class="masonry" data-gallery="custom"></div></div>
+          <div class="tab-pane fade" id="graphics" role="tabpanel"><div class="masonry" data-gallery="graphics"></div></div>
+          <div class="tab-pane fade" id="interior" role="tabpanel"><div class="masonry" data-gallery="interior"></div></div>
+          <div class="tab-pane fade" id="monuments" role="tabpanel"><div class="masonry" data-gallery="monuments"></div></div>
+          <div class="tab-pane fade" id="pylons" role="tabpanel"><div class="masonry" data-gallery="pylons"></div></div>
+          <div class="tab-pane fade" id="wayfinding" role="tabpanel"><div class="masonry" data-gallery="wayfinding"></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
 <footer class="pt-7">
    <div class="container">
       <!-- Footer 4 column -->
@@ -364,13 +340,13 @@
    </div>
 </footer>
 
-    <div class="btn-scroll-top">
+  <div class="btn-scroll-top">
    <svg class="progress-square svg-content" width="100%" height="100%" viewBox="0 0 40 40">
       <path d="M8 1H32C35.866 1 39 4.13401 39 8V32C39 35.866 35.866 39 32 39H8C4.13401 39 1 35.866 1 32V8C1 4.13401 4.13401 1 8 1Z" />
    </svg>
 </div>
 
-    <!-- Libs JS -->
+  <!-- Libs JS -->
 <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/libs/simplebar/dist/simplebar.min.js"></script>
 <script src="./assets/libs/headhesive/dist/headhesive.min.js"></script>
@@ -378,63 +354,68 @@
 <!-- Theme JS -->
 <script src="./assets/js/theme.min.js"></script>
 
-    <script>
-const folderMap = {
-  awnings: 'Awnings',
-  channel: 'Channel Letters',
-  custom: 'Custom',
-  graphics: 'Graphics',
-  interior: 'Interior',
-  monuments: 'Monuments',
-  pylons: 'Pylons',
-  wayfinding: 'Wayfinding'
-};
 
-fetch('./assets/data/images.json')
-  .then(res => res.json())
-  .then(imageData => {
-    const allGallery = document.getElementById('all-gallery');
-    const allImages = [];
+  <!-- Load and Inject Images by Category -->
+  <script>
+    const folderMap = {
+      awnings: 'Awnings',
+      channel: 'Channel Letters',
+      custom: 'Custom',
+      graphics: 'Graphics',
+      interior: 'Interior',
+      monuments: 'Monuments',
+      pylons: 'Pylons',
+      wayfinding: 'Wayfinding'
+    };
 
-    Object.entries(imageData).forEach(([category, images]) => {
-      const container = document.querySelector(`[data-gallery="${category}"]`);
-      const displayCategory = folderMap[category] || category;
-      if (!container) return;
-      const shuffled = images.sort(() => 0.5 - Math.random()).slice(0, 48);
+    fetch('./assets/data/images.json')
+      .then(res => res.json())
+      .then(imageData => {
+        const allGallery = document.getElementById('all-gallery');
+        const allImages = [];
 
-      shuffled.forEach(img => {
-        const imagePath = `./assets/images/${displayCategory}/${img}`;
-        const item = document.createElement('div');
-        item.className = 'masonry-item';
-        item.innerHTML = `<img src="${imagePath}" alt="${category}" loading="lazy">`;
-        container.appendChild(item);
+        // Load images for each category tab
+        Object.entries(imageData).forEach(([category, images]) => {
+          const container = document.querySelector(`[data-gallery="${category}"]`);
+          const displayCategory = folderMap[category] || category;
+          if (!container) return;
 
-        allImages.push({ path: imagePath, category });
+          const shuffled = images.sort(() => 0.5 - Math.random()).slice(0, 48);
+
+          shuffled.forEach(img => {
+            const imagePath = `./assets/images/${displayCategory}/${img}`;
+            const item = document.createElement('div');
+            item.className = 'masonry-item';
+            item.innerHTML = `<img src="${imagePath}" alt="${category}" loading="lazy">`;
+            container.appendChild(item);
+            allImages.push({ path: imagePath, category });
+          });
+        });
+
+        // Load a combined shuffled preview for the All tab
+        const shuffledAll = allImages.sort(() => 0.5 - Math.random()).slice(0, 48);
+        shuffledAll.forEach(({ path, category }) => {
+          const item = document.createElement('div');
+          item.className = 'masonry-item';
+          item.innerHTML = `<img src="${path}" alt="${category}" loading="lazy">`;
+          allGallery.appendChild(item);
+        });
       });
-    });
+  </script>
 
-    const shuffledAll = allImages.sort(() => 0.5 - Math.random()).slice(0, 48);
-    shuffledAll.forEach(({ path, category }) => {
-      const item = document.createElement('div');
-      item.className = 'masonry-item';
-      item.innerHTML = `<img src="${path}" alt="${category}" loading="lazy">`;
-      allGallery.appendChild(item);
-    });
-  });
-    </script>
-
-    <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const hash = window.location.hash;
-    if (hash) {
-      const tabTrigger = document.querySelector(`button[data-bs-target="${hash}"]`);
-      if (tabTrigger) {
-        const tab = new bootstrap.Tab(tabTrigger);
-        tab.show();
+  <!-- Tab Switching from URL Hash (e.g. #awnings) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hash = window.location.hash;
+      if (hash) {
+        const tabTrigger = document.querySelector(`button[data-bs-target="${hash}"]`);
+        if (tabTrigger) {
+          const tab = new bootstrap.Tab(tabTrigger);
+          tab.show();
+        }
       }
-    }
-  });
-</script>
+    });
+  </script>
+</body>
 
-  </body>
 </html>
