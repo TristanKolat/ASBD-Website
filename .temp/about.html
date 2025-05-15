@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Favicon icon-->
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+<link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+<link rel="mask-icon" href="./assets/images/favicon/block-safari-pinned-tab.svg" color="#8b3dff" />
+<link rel="shortcut icon" href="./assets/images/favicon/favicon.ico" />
+<meta name="msapplication-TileColor" content="#8b3dff" />
+<meta name="msapplication-config" content="./assets/images/favicon/tile.xml" />
+
+<!-- Color modes -->
+<script src="./assets/js/vendors/color-modes.js"></script>
+
+<!-- Libs CSS -->
+<link href="./node_modules/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+<link href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+<!-- Scroll Cue -->
+<link rel="stylesheet" href="./node_modules/scrollcue/scrollCue.css" />
+
+<!-- Box icons -->
+<link rel="stylesheet" href="./assets/fonts/css/boxicons.min.css" />
+
+<!-- Theme CSS -->
+<!-- build:css ./assets/css/theme.min.css -->
+<link rel="stylesheet" id="theme-stylesheet" href="./assets/css/theme.css" />
+<!-- endbuild -->
+
+    <title>ASBD | About Us</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light w-100">
+    <div class="container px-3">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <img src="./assets/images/logo/asbd_logo.svg"
+          alt="A Sign by Design Logo"
+          style="max-height: 100px; height: 45px;" />
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="navbar-toggler offcanvas-nav-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <!-- Offcanvas Nav for Mobile -->
+      <div class="offcanvas offcanvas-start offcanvas-nav" id="offcanvasNavbar" tabindex="-1" style="width: 20rem">
+        <div class="offcanvas-header">
+          <a href="./index.html" class="text-inverse">
+            <img src="./assets/images/logo/asbd_logo.svg"
+              alt="A Sign by Design Logo"
+              style="max-height: 100px; height: 45px;" />
+          </a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body pt-0 align-items-center">
+          <ul class="navbar-nav mx-auto align-items-lg-center">
+            <!-- Home -->
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+
+            <!-- Gallery -->
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html#all">Gallery</a>
+            </li>
+
+            <!-- About Us -->
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+            </li>
+
+            <!-- Our Process -->
+            <li class="nav-item">
+              <a class="nav-link" href="./process.html">Our Process</a>
+            </li>
+          </ul>
+
+          <!-- Quote Button -->
+          <div class="mt-3 mt-lg-0 d-flex align-items-center">
+            <a href="./quote.html" class="btn btn-primary">Get Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Highlight Active Page Script -->
+<script>
+  const currentPath = location.pathname.split("/").pop().toLowerCase();
+  document.querySelectorAll(".nav-link").forEach(link => {
+    const linkPath = link.getAttribute("href").split("/").pop().toLowerCase().split("#")[0];
+    if (linkPath === currentPath) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+ 
+
+
+    <main>
+      <!-- === Page Header === -->
+      <section class="py-5 py-lg-8">
+        <div class="text-center mb-4">
+          <h2 class="display-5 fw-bold">About ASBD</h2>
+          <p class="lead">Designing impact. Building identity. Signage that speaks for your brand.</p>
+        </div>
+      </section>
+
+      <!-- === Contact & Story Section === -->
+      <section class="mb-xl-9">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="mb-6">
+                <h1 class="mb-0">A Quality Sign Says It All</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-items-center gy-5">
+            <!-- Owner Image -->
+            <div class="col-lg-7 col-md-12">
+              <img src="./assets/images/Home_Priority/1.jpg" class="img-fluid rounded-3 shadow-sm" alt="Owner-ASBD" />
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-5 col-md-12">
+              <!-- Location -->
+              <div class="d-flex mb-4">
+                <div class="icon-md icon-shape rounded-circle bg-body-tertiary bg-opacity-50 border d-flex align-items-center justify-content-center">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="ms-3">
+                  <h5>Location</h5>
+                  <p class="mb-0">501 W. Noble Street, Lebanon, IN 46052</p>
+                </div>
+              </div>
+
+              <!-- Business Hours -->
+              <div class="d-flex border-top pt-4 mb-4">
+                <div class="icon-md icon-shape rounded-circle bg-body-tertiary bg-opacity-50 border d-flex align-items-center justify-content-center">
+                  <i class="bi bi-window-dock"></i>
+                </div>
+                <div class="ms-3">
+                  <h5>Business Hours</h5>
+                  <p class="mb-0">Monday – Friday: 8:00 AM – 5:00 PM<br>Saturday – Sunday: Closed</p>
+                </div>
+              </div>
+
+              <!-- Contact Methods -->
+              <div class="d-flex border-top pt-4">
+                <div class="icon-md icon-shape rounded-circle bg-body-tertiary bg-opacity-50 border d-flex align-items-center justify-content-center">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div class="ms-3">
+                  <h5>Contact</h5>
+                  <p class="mb-1">Phone: <a href="tel:3178767900" class="text-decoration-none">317.876.7900</a></p>
+                  <p class="mb-0">Email: <a href="mailto:sales@asignbydesign.com" class="text-decoration-none">sales@asignbydesign.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- === Company Story === -->
+          <div class="row mt-7">
+            <div class="col-lg-7 col-md-12">
+              <div class="mb-6 mt-4">
+                <h2 class="mb-4">About</h2>
+                <p class="mb-3">
+                  A Sign By Design is a full service commercial sign company that takes a client’s idea for a sign, creates it, navigates the legal system for approval, then manufactures and installs it.
+                  <br><br>
+                  When Beverly Miller founded A Sign By Design in 1988, she certainly didn’t imagine that it would be where it is today.
+                  <br><br>
+                  At the time, the only options available to illuminate signage were fluorescent or neon. In an attempt to keep up with technology and to protect the environment, today, A Sign By Design uses LED lighting in over 95% of their signs. In addition to being low voltage, LED lighting is also low maintenance which makes our customers satisfied and happy.
+                  <br><br>
+                  In 2010, A Sign By Design was ranked third in Indianapolis Business Journal’s book of lists in the sign industry category. Also in 2010, the Indianapolis Business Journal included A Sign By Design in their top 25 women owned businesses.
+                  <br><br>
+                  In over 23 years of operation, A Sign By Design signs have landscaped the city of Indianapolis. They identify the products and services that you use on a daily basis. At the airport, the RCA sign “Welcomes You to Indianapolis.” The Community Hospital sign directs you to the emergency room or to your doctor’s office. Your view from your seat at Victory Field provides an illuminated roster of our clients; Courtyard by Marriott, Duke Realty, the Hoosier Lottery and Key Bank.
+                  <br><br>
+                  We have expanded our operations by manufacturing and installing signs across the country as far as California. Lincoln Technical Institute, Verizon Wireless as well as Amazon Fulfillment signs appear in over 15 states.
+                </p>
+                <p class="mb-0">And it all began in a spare room with a telephone and a fax machine and a desire to succeed.</p>
+              </div>
+            </div>
+
+            <!-- === Contact Form === -->
+            <div class="col-lg-4 offset-lg-1 col-md-12">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="mb-6 text-center">
+                    <h3 class="mb-0">Reach out today to learn more about what we can do for you.</h3>
+                  </div>
+
+                  <form class="needs-validation mb-4"
+                        action="https://formsubmit.co/sales@asignbydesign.com"
+                        method="POST" novalidate>
+
+                    <!-- Anti-spam hidden fields -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://asignbydesign.com/thank-you.html">
+                    <input type="text" name="_honey" style="display:none">
+
+                    <!-- Full Name -->
+                    <div class="mb-3">
+                      <label for="quoteFullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="quoteFullName" name="name" required />
+                    </div>
+
+                    <!-- Company Name -->
+                    <div class="mb-3">
+                      <label for="quoteCompany" class="form-label">Company Name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="quoteCompany" name="company" required />
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                      <label for="quoteEmail" class="form-label">Email <span class="text-danger">*</span></label>
+                      <input type="email" class="form-control" id="quoteEmail" name="email" required />
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="mb-3">
+                      <label for="quotePhone" class="form-label">Phone Number (optional)</label>
+                      <input type="tel" class="form-control" id="quotePhone" name="phone" />
+                    </div>
+
+                    <!-- Sign Type -->
+                    <div class="mb-3">
+                      <label for="quoteType" class="form-label">Type of Sign Needed <span class="text-danger">*</span></label>
+                      <select class="form-select" id="quoteType" name="sign_type" required>
+                        <option value="" disabled selected>Select a sign type</option>
+                        <option>Awnings</option>
+                        <option>Channel Letters</option>
+                        <option>Custom Sign</option>
+                        <option>Interior</option>
+                        <option>Monument</option>
+                        <option>Pylon</option>
+                        <option>Wayfinding</option>
+                        <option>Not Sure</option>
+                      </select>
+                    </div>
+
+                    <!-- Project Details -->
+                    <div class="mb-3">
+                      <label for="quoteDetails" class="form-label">Project Details (optional)</label>
+                      <textarea class="form-control" id="quoteDetails" name="message" rows="4"
+                        placeholder="Tell us about the location, size, timeline, and any other info..."></textarea>
+                    </div>
+
+                    <!-- reCAPTCHA -->
+                    <div class="d-flex justify-content-center mb-3">
+                      <div class="g-recaptcha" data-sitekey="your_site_key_here"></div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-grid">
+                      <button class="btn btn-primary" type="submit">Submit Quote Request</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End row -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+<footer class="pt-7">
+   <div class="container">
+      <!-- Footer 4 column -->
+      <div class="row">
+         <div class="col-lg-9 col-12 mx-auto"> <!-- Centered this row -->
+            <div class="row" id="ft-links">
+               <div class="col-lg-3 col-12">
+                  <div>
+                     <div class="mb-3 pb-2 d-flex justify-content-between border-bottom border-bottom-lg-0">
+                        <h4>Service</h4>
+                        <a class="d-block d-lg-none text-body" data-bs-toggle="collapse" href="#collapseLanding" role="button" aria-expanded="false" aria-controls="collapseLanding">
+                           <i class="bi bi-chevron-down"></i>
+                        </a>
+                     </div>
+                     <div class="collapse d-lg-block" id="collapseLanding" data-bs-parent="#ft-links">
+                        <ul class="list-unstyled mb-0 py-3 py-lg-0">
+                           <li class="mb-2">
+                              <a href="./quote.html" class="text-decoration-none text-reset">Request Maintenance</a>
+                           </li>
+                           <li class="mb-2">
+                              <a href="./quote.html" class="text-decoration-none text-reset">Get Quote</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+   
+               <div class="col-lg-3 col-12">
+                  <div>
+                     <div class="mb-3 pb-2 d-flex justify-content-between border-bottom border-bottom-lg-0 position-relative">
+                        <h4>About us</h4>
+                        <a class="d-block d-lg-none text-body" data-bs-toggle="collapse" href="#collapseAccounts" role="button" aria-expanded="false" aria-controls="collapseAccounts">
+                           <i class="bi bi-chevron-down"></i>
+                        </a>
+                     </div>
+                     <div class="collapse d-lg-block" id="collapseAccounts" data-bs-parent="#ft-links">
+                        <ul class="list-unstyled mb-0 py-3 py-lg-0">
+                           <li class="mb-2">
+                              <a href="./about.html" class="text-decoration-none text-reset">About</a>
+                           </li>
+                           <li class="mb-2">
+                              <a href="./process.html" class="text-decoration-none text-reset">Process</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+   
+               <div class="col-lg-3 col-12">
+                  <div class="mb-3 pb-2 d-flex justify-content-between border-bottom border-bottom-lg-0 position-relative">
+                     <h4>Contact</h4>
+                     <a class="d-block d-lg-none text-body" data-bs-toggle="collapse" href="#collapseLocations" role="button" aria-expanded="false" aria-controls="collapseLocations">
+                        <i class="bi bi-chevron-down"></i>
+                     </a>
+                  </div>
+                  <div class="collapse d-lg-block" id="collapseLocations" data-bs-parent="#ft-links">
+                     <ul class="list-unstyled mb-0 py-3 py-lg-0">
+                        <li class="mb-2">
+                           <p class="text-body-secondary">317.876.7900 </p>
+                           <p class="text-body-secondary">sales@asignbydesign.com </p>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+   
+               <div class="col-lg-3 col-12">
+                  <div class="me-7">
+                     <h4 class="mb-4">Address</h4>
+                     <p class="text-body-secondary">501 W. Noble Street, Lebanon, IN 46052 </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+   <div class="container mt-7 pt-lg-7 pb-4">
+      <div class="row align-items-center">
+         <div class="col-md-3">
+            <a class="mb-4 mb-lg-0 d-block text-inverse" href="./index.html">
+               <img src="./assets/images/logo/asbd_logo.svg"
+                  alt="A Sign by Design Logo"
+                  style="max-height: 100px; height: 65px; " />
+            </a>
+         </div>
+         <div class="col-md-9 col-lg-6">
+            <div class="small mb-3 mb-lg-0 text-lg-center">
+               Copyright © 2025
+
+               <span class="text-primary"><a href="#">A Sign by Design</a></span>
+               | Designed by
+               <span class="text-primary"><a href="#">Tristan Kolat</a></span>
+            </div>
+         </div>
+         <div class="col-md-3">
+            <div class="text-md-end d-flex align-items-center justify-content-md-end">
+               <div class="dropdown">
+                  <button class="btn btn-light btn-icon rounded-circle d-flex align-items-center" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+                     <i class="bi theme-icon-active lh-1"></i>
+                     <span class="visually-hidden bs-theme-text">Toggle theme</span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bs-theme-text">
+                     <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                           <i class="bi theme-icon bi-sun-fill"></i>
+                           <span class="ms-2">Light</span>
+                        </button>
+                     </li>
+                     <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                           <i class="bi theme-icon bi-moon-stars-fill"></i>
+                           <span class="ms-2">Dark</span>
+                        </button>
+                     </li>
+                     <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                           <i class="bi theme-icon bi-circle-half"></i>
+                           <span class="ms-2">Auto</span>
+                        </button>
+                     </li>
+                  </ul>
+               </div>
+               <div class="ms-3 d-flex gap-2">
+                  <a href="https://www.facebook.com/p/A-Sign-by-Design-100057455106200/" class="btn btn-facebook btn-icon" target="_blank" rel="noopener">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path
+                           d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                     </svg>
+                  </a>
+
+                  <a href="https://www.linkedin.com/company/a-sign-by-design_2" class="btn btn-linkedin btn-icon" target="_blank" rel="noopener">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                       <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.213c.837 0 1.358-.554 1.358-1.248-.015-.71-.521-1.248-1.342-1.248-.822 0-1.359.538-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zM13.458 13.394v-3.987c0-2.13-1.137-3.121-2.653-3.121-1.223 0-1.77.672-2.078 1.145v-0.982H6.327c.03.651 0 7.225 0 7.225h2.401v-4.035c0-.216.016-.432.08-.586.173-.432.567-.88 1.23-.88.868 0 1.215.665 1.215 1.64v3.861h2.205z"/>
+                     </svg>
+                   </a>
+                   
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+
+    <!-- Libs JS -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./node_modules/simplebar/dist/simplebar.min.js"></script>
+<script src="./node_modules/headhesive/dist/headhesive.min.js"></script>
+
+<!-- Theme JS -->
+<!-- build:js ./assets/js/theme.min.js -->
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/vendors/offcanvas.js"></script>
+<script src="./assets/js/vendors/navbar.js"></script>
+<!-- endbuild -->
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Email validation (basic format check) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const forms = document.querySelectorAll("form");
+
+        forms.forEach(form => {
+          form.addEventListener("submit", function (e) {
+            const emailInput = form.querySelector("input[type='email']");
+            const email = emailInput?.value.trim();
+            const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+            if (!isValid) {
+              e.preventDefault();
+              emailInput.classList.add("is-invalid");
+              emailInput.focus();
+            } else {
+              emailInput.classList.remove("is-invalid");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

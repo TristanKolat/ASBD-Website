@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta + Styles -->
+  <!-- Required meta tags -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Favicon icon-->
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+<link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+<link rel="mask-icon" href="./assets/images/favicon/block-safari-pinned-tab.svg" color="#8b3dff" />
+<link rel="shortcut icon" href="./assets/images/favicon/favicon.ico" />
+<meta name="msapplication-TileColor" content="#8b3dff" />
+<meta name="msapplication-config" content="./assets/images/favicon/tile.xml" />
+
+<!-- Color modes -->
+<script src="./assets/js/vendors/color-modes.js"></script>
+
+<!-- Libs CSS -->
+<link href="./node_modules/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+<link href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+<!-- Scroll Cue -->
+<link rel="stylesheet" href="./node_modules/scrollcue/scrollCue.css" />
+
+<!-- Box icons -->
+<link rel="stylesheet" href="./assets/fonts/css/boxicons.min.css" />
+
+<!-- Theme CSS -->
+<!-- build:css ./assets/css/theme.min.css -->
+<link rel="stylesheet" id="theme-stylesheet" href="./assets/css/theme.css" />
+<!-- endbuild -->
+
+  <title>ASBD | A Sign by Design</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <!-- Navbar -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light w-100">
+    <div class="container px-3">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <img src="./assets/images/logo/asbd_logo.svg"
+          alt="A Sign by Design Logo"
+          style="max-height: 100px; height: 45px;" />
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="navbar-toggler offcanvas-nav-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <!-- Offcanvas Nav for Mobile -->
+      <div class="offcanvas offcanvas-start offcanvas-nav" id="offcanvasNavbar" tabindex="-1" style="width: 20rem">
+        <div class="offcanvas-header">
+          <a href="./index.html" class="text-inverse">
+            <img src="./assets/images/logo/asbd_logo.svg"
+              alt="A Sign by Design Logo"
+              style="max-height: 100px; height: 45px;" />
+          </a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body pt-0 align-items-center">
+          <ul class="navbar-nav mx-auto align-items-lg-center">
+            <!-- Home -->
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+
+            <!-- Gallery -->
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html#all">Gallery</a>
+            </li>
+
+            <!-- About Us -->
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+            </li>
+
+            <!-- Our Process -->
+            <li class="nav-item">
+              <a class="nav-link" href="./process.html">Our Process</a>
+            </li>
+          </ul>
+
+          <!-- Quote Button -->
+          <div class="mt-3 mt-lg-0 d-flex align-items-center">
+            <a href="./quote.html" class="btn btn-primary">Get Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Highlight Active Page Script -->
+<script>
+  const currentPath = location.pathname.split("/").pop().toLowerCase();
+  document.querySelectorAll(".nav-link").forEach(link => {
+    const linkPath = link.getAttribute("href").split("/").pop().toLowerCase().split("#")[0];
+    if (linkPath === currentPath) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+ 
+
+
+  <!-- === Gallery Tab Reset Fix === -->
+  <script>
+    document.querySelectorAll('a.dropdown-item[href^="gallery.html#"]').forEach(link => {
+      link.addEventListener('click', function () {
+        this.blur();
+        setTimeout(() => {
+          if (window.location.pathname.includes('index.html')) {
+            history.replaceState(null, "", window.location.pathname);
+          }
+        }, 1000);
+      });
+    });
+  </script>
+
+  <main>
+    <!-- === Page Header === -->
+    <section class="container pt-2 pb-1" data-cue="fadeIn">
+      <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-10 col-12" data-cues="zoomIn" data-group="page-title" data-delay="700">
+          <div class="text-center d-flex flex-column gap-4">
+            <div class="d-flex flex-column gap-3 mx-lg-8">
+              <h1 class="mb-0 display-5">A Sign by Design</h1>
+              <p class="mb-0 lead text-danger">A Quality Sign Says It All</p>
+            </div>
+            <div class="d-flex flex-row gap-2 justify-content-center">
+              <a href="./quote.html" class="btn btn-primary" target="_blank">Get Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === Scrolling Image Marquees === -->
+          <!--Preview image start-->
+      <div class="my-xl-7 py-5 d-none d-lg-block">
+         <div class="container-fluid">
+           <div class="row mb-7 pb-2 text-center justify-content-center gy-4">
+             <div class="col-lg-12 col-12">
+               <div class="marquee h-auto">
+                 <div class="track d-flex gap-4 animate-scroll">
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/Fords.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/IMG_8466.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/Cabellas Blg letters-1.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/Unknown-1.jpeg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/Indianapolis Zoo.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/1.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/Crown Royal.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/Fortune Park Monument-1 (1).jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/IMG_4293 (1).JPG" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/HolidayInn Pylon.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/AMC bldg letters-1.jpg" alt="Image" class="img-cover border" /></div>
+                 </div>
+               </div>
+             </div>
+             <div class="col-lg-12 col-12">
+               <div class="marquee h-auto">
+                 <div class="track-2 d-flex gap-4 py-3 animate-scroll-reverse">
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/Indianapolis Zoo.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Channel Letters/FortuneParkNite.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Graphics/2.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/IMG_4293 (1).JPG" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Awnings/Unknown copy-1.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/HolidayInn Pylon.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Interior/Game Show - Interior.jpeg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Custom/Unknown-1.jpeg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/Crown Royal.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/IMG_8466.jpg" alt="Image" class="img-cover border" /></div>
+                   <div class="custom-img-box"><img src="./assets/images/Home_Priority/AMC bldg letters-1.jpg" alt="Image" class="img-cover border" /></div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+      </div>
+      <!--Preview image end-->
+
+    <!-- === Process Steps === -->
+          <!--Landing pages start-->
+      <section class="my-xl-5 py-4">
+         <div class="container mb-xl-6" data-cue="fadeIn">
+           <div class="text-center mb-4">
+             <h2 class="display-5 fw-bold">Our Process</h2>
+           </div>
+           <div class="row row-cols-1 row-cols-lg-5 gy-4">
+       
+             <!-- Design -->
+             <div class="col" data-cue="zoomIn">
+               <div class="card card-lift h-100">
+                 <div class="card-body d-flex flex-column gap-4 h-100">
+                   <div class="d-flex justify-content-center"><img src="./assets/images/icons/design.svg" width="75" height="75" alt="Design icon"></div>
+                   <div class="d-flex flex-column gap-2 flex-grow-1">
+                     <h3 class="mb-0 fs-4">Design</h3>
+                     <p class="mb-0">Our graphic design team works closely with our project managers to implement numerous creative strategies for us to achieve your company’s branding standards while gaining the maximum potential for your signage.</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+       
+             <!-- Permitting & Compliance -->
+             <div class="col" data-cue="zoomIn">
+               <div class="card card-lift h-100">
+                 <div class="card-body d-flex flex-column gap-4 h-100">
+                   <div class="d-flex justify-content-center"><img src="./assets/images/icons/p&c.svg" width="75" height="75" alt="Permit icon"></div>
+                   <div class="d-flex flex-column gap-2 flex-grow-1">
+                     <h3 class="mb-0 fs-4">Permitting & Compliance</h3>
+                     <p class="mb-0">Our permit specialist works in conjunction with local municipalities and property owners to meet any challenges that arise during the permit process.</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+       
+             <!-- Manufacturing -->
+             <div class="col" data-cue="zoomIn">
+               <div class="card card-lift h-100">
+                 <div class="card-body d-flex flex-column gap-4 h-100">
+                  <div class="d-flex justify-content-center"><img src="./assets/images/icons/manufacturing.svg" width="75" height="75" alt="Manufacturing icon"></div>
+                   <div class="d-flex flex-column gap-2 flex-grow-1">
+                     <h3 class="mb-0 fs-4">Manufacturing</h3>
+                     <p class="mb-0">Our custom in-house manufacturing plant allows us to work with no boundaries. Using an array of raw materials, our expert craftsmen can manifest any creation from scratch.</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+       
+             <!-- Installation -->
+             <div class="col" data-cue="zoomIn">
+               <div class="card card-lift h-100">
+                 <div class="card-body d-flex flex-column gap-4 h-100">
+                  <div class="d-flex justify-content-center"><img src="./assets/images/icons/install.svg" width="75" height="75" alt="Installation icon"></div>
+                   <div class="d-flex flex-column gap-2 flex-grow-1">
+                     <h3 class="mb-0 fs-4">Installation</h3>
+                     <p class="mb-0">Along with custom manufacturing, we have the ability to install all types of site signage. With various cranes, bucket trucks and specialty lifts, we offer solutions for any type of installation.</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+       
+             <!-- Maintenance -->
+             <div class="col" data-cue="zoomIn">
+               <div class="card card-lift h-100">
+                 <div class="card-body d-flex flex-column gap-4 h-100">
+                  <div class="d-flex justify-content-center"><img src="./assets/images/icons/maintenance.svg" width="75" height="75" alt="Maintenance icon"></div>
+                   <div class="d-flex flex-column gap-2 flex-grow-1">
+                     <h3 class="mb-0 fs-4">Maintenance</h3>
+                     <p class="mb-0">If your existing sign needs to be serviced or refurbished, our staff has the experience and expertise to address any issue you may want rectified.</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+       
+           </div>
+         </div>
+      </section>
+      <!--Landing pages end-->
+
+    <!-- === Gallery Categories === -->
+    <!--Stunning landing start-->
+      <section class="py-5 bg-light-subtle" id="demo">
+         <div class="container my-lg-7" data-cues="fadeIn">
+           <div class="row mb-8">
+             <div class="col-xl-8 offset-xl-2 col-12">
+               <div class="d-flex flex-column gap-2 mx-lg-8 text-center">
+                 <h2 class="mb-0">Explore our work across all major sign types.</h2>
+               </div>
+             </div>
+           </div>
+           <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 gy-6 justify-content-center">
+             <div class="col" data-cues="zoomIn">
+               <div class="overflow-hidden rounded-3">
+                <a href = "gallery.html#awnings">
+                  <img src="./assets/images/Awnings/Century 21 bldg& banners-1.jpg" class="border img-fluid landing-card" alt="Awnings">
+                </a>
+               </div> 
+               <h4 class="mb-0 mt-3">Awnings</h4>
+             </div>
+             <div class="col" data-cues="zoomIn">
+               <div class="overflow-hidden rounded-3">
+                <a href = "gallery.html#channel">
+                 <img src="./assets/images/Channel Letters/Unknown-1-1-5.jpg" class="border img-fluid landing-card" alt="Channel Letters">
+                </a>
+               </div>
+               <h4 class="mb-0 mt-3">Channel Letters</h4>
+             </div>
+             <div class="col" data-cues="zoomIn">
+               <div class="overflow-hidden rounded-3">
+                <a href = "gallery.html#custom">
+                 <img src="./assets/images/Custom/BoneFish Bldg Letters-1.jpg" class="border img-fluid landing-card" alt="Custom">
+                 </a>
+               </div>
+               <h4 class="mb-0 mt-3">Custom</h4>
+             </div>
+             <div class="col" data-cues="zoomIn">
+               <div class="overflow-hidden rounded-3">
+                <a href = "gallery.html#graphics">
+                 <img src="./assets/images/Graphics/IMG_8765.jpg" class="border img-fluid landing-card" alt="Graphics">
+                 </a>
+               </div>
+               <h4 class="mb-0 mt-3">Graphics</h4>
+             </div>
+             <div class="col" data-cues="zoomIn">
+               <div class="overflow-hidden rounded-3">
+                <a href = "gallery.html#interior">
+                 <img src="./assets/images/Interior/20150604_160845.jpg" class="border img-fluid landing-card" alt="Interior">
+                </a>
+               </div>
+               <h4 class="mb-0 mt-3">Interior</h4>
+             </div>
+             <div class="col" data-cues="zoomIn">
+               <div class="overflow-hidden rounded-3">
+                <a href = "gallery.html#monuments">
+                 <img src="./assets/images/Monuments/Lebanon monument-1.jpg" class="border img-fluid landing-card" alt="Monuments">
+                </a>
+               </div>
+               <h4 class="mb-0 mt-3">Monuments</h4>
+             </div>
+             <div class="col" data-cues="zoomIn">
+               <div class="overflow-hidden rounded-3">
+                <a href = "gallery.html#pylons">
+                 <img src="./assets/images/Pylons/Unknown.jpeg" class="border img-fluid landing-card" alt="Pylons">
+                </a>
+              </div>
+               <h4 class="mb-0 mt-3">Pylons</h4>
+             </div>
+             <div class="col" data-cues="zoomIn">
+               <div class="overflow-hidden rounded-3">
+                <a href = "./gallery.html#wayfinding">
+                 <img src="./assets/images/Wayfinding/Unknown.jpeg" class="border img-fluid landing-card" alt="Wayfinding">
+                </a>
+               </div>
+               <h4 class="mb-0 mt-3">Wayfinding</h4>
+             </div>
+           </div>
+         </div>
+       </section>
+      <!--Stunning landing start-->
+
+    <!-- === Company Mission Statement === -->
+    <section class="bg-dark py-8">
+         <div class="container">
+            <div class="row justify-content-center text-center">
+               <div class="col-lg-10 col-md-12">
+                  <div class="mb-5 mb-lg-0">
+                     <h1 class="text-white mb-4">Our Mission</h1>
+                     <h4 class="text-white mb-4">Our goal at ASBD is to provide companies with identity 
+                        and merchandising solutions that fit their needs while keeping in compliance with the City and Industry’s standards. 
+                        Our turnkey project management staff will take you step by step through our process to help make your vision become a reality.</h4>
+
+                     <a href="./about.html" class="btn btn-primary me-3" target="_blank">Learn More</a>
+                     <span class="fs-5">Continually evolving to better serve your brand.</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+    <!-- === Testimonials === -->
+    <section class="py-8 bg-light-subtle">
+         <div class="container">
+           <div class="row mb-5 text-center">
+             <div class="col-12">
+               <h2 class="display-5 fw-bold">What Our Customers Say</h2>
+               <p class="lead text-danger">Real feedback from real projects.</p>
+             </div>
+           </div>
+       
+           <div class="swiper testimonial-swiper">
+             <div class="swiper-wrapper">
+       
+               <!-- Testimonial 1 -->
+               <div class="swiper-slide">
+                 <div class="card h-100 border-0 shadow-sm p-4 transition-hover">
+                     <span class="border-left"></span>
+                     <span class="border-right"></span>
+                   <div class="card-body d-flex flex-column align-items-center text-center gap-3">
+                     <div class="rounded-circle overflow-hidden" style="width: 100px; height: 100px;">
+                       <img src="./assets/images/Testimonials/duke1.jpg" alt="Sign Image" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+                     </div>
+                     <blockquote class="mb-3 fst-italic text-muted small">
+                       "I worked with Bev Miller and her “A Sign By Design” company over 30+ years in the 
+                       Indianapolis Commercial Real Estate Industry. Bev and her team started off as a vendor, 
+                       then also became our design partner as she helped us create “Signage Standards” for every building in our 
+                       Indy Portfolio of 100+ buildings. This helped us streamline all signage design approvals on a tenant by tenant basis. 
+                       Bev has many incredible qualities such as Integrity, Honesty, Diligent, Timely & Efficient. I would highly recommend 
+                       Bev and her team to bid and complete any signage project you are contemplating as she will move the project from start to finish 
+                       in a very creative, yet cost effective & on time."
+                     </blockquote>
+                     <div>
+                       <h5 class="mb-0 fw-bold">Craig Anderson</h5>
+                       <small class="text-muted">Former VP of Duke Realty Investments</small>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+       
+               <!-- Testimonial 2 -->
+               <div class="swiper-slide">
+                 <div class="card h-100 border-0 shadow-sm p-4 transition-hover">
+                  <span class="border-left"></span>
+                  <span class="border-right"></span>
+                   <div class="card-body d-flex flex-column align-items-center text-center gap-3">
+                     <div class="rounded-circle overflow-hidden" style="width: 100px; height: 100px;">
+                       <img src="./assets/images/testimonials/sample-sign2.jpg" alt="Sign Image" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+                     </div>
+                     <blockquote class="mb-3 fst-italic text-muted small">
+                        “We have partnered with A Sign By Design on many sign projects over the years. 
+                        Whether it’s a large-scale monument sign or a smaller exterior building sign, 
+                        interior signs, logo signs or glass etching, The team at A Sign by Design always gets the job done on time, 
+                        within budget and we couldn’t be happier with the people, process and products.
+                         They are our go-to signage partner.”
+                     </blockquote>
+                     <div>
+                       <h5 class="mb-0 fw-bold">Dina Randall</h5>
+                       <small class="text-muted">Vice President: HR, IT, Office Mgmt., Marketing<br></small>
+                       <small class="text-muted">Strategic Capital Partners, LLC</small>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               
+               <!-- Testimonial 3 -->
+               <div class="swiper-slide">
+                  <div class="card h-100 border-0 shadow-sm p-4 transition-hover">
+                     <span class="border-left"></span>
+                     <span class="border-right"></span>
+                    <div class="card-body d-flex flex-column align-items-center text-center gap-3">
+                      <div class="rounded-circle overflow-hidden" style="width: 100px; height: 100px;">
+                        <img src="./assets/images/Testimonials/blank.jpg" alt="Sign Image" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+                      </div>
+                      <blockquote class="mb-3 fst-italic text-muted small">
+                        "We have been working with ASBD for numerous years and have built a strong working relationship with their team. 
+                        ASBD provides top-notch customer service, competitive pricing, quality workmanship and excellent design capabilities. 
+                        They are able to tailor and customize our specific needs while meeting stringent deadlines. 
+                        From large Industrial and Retail Park pylon and monument signage to interior tenant signage, 
+                        they consistently meet our expectations."
+                      </blockquote>
+                      <div>
+                        <h5 class="mb-0 fw-bold">Jason Widner</h5>
+                        <small class="text-muted">Directory of Property Management<br></small>
+                        <small class="text-muted">Sunbeam Development Corporation</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+               <div class="swiper-slide">
+                  <div class="card h-100 border-0 shadow-sm p-4 transition-hover">
+                     <span class="border-left"></span>
+                     <span class="border-right"></span>
+                    <div class="card-body d-flex flex-column align-items-center text-center gap-3">
+                      <div class="rounded-circle overflow-hidden" style="width: 100px; height: 100px;">
+                        <img src="./assets/images/Testimonials/blank.jpg" alt="Sign Image" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+                      </div>
+                      <blockquote class="mb-3 fst-italic text-muted small">
+                        "I believe the greatest compliment I can give the team at A Sign By Design is that for the past 20+ years, 
+                        I’m comfortable referring any (and all) of my clients to them and I know that they will be treated with professionalism and delivered a 
+                        first class product and that I won’t have to oversee the process. I know that they will be in excellent hands with A Sign by Design."
+                      </blockquote>
+                      <div>
+                        <h5 class="mb-0 fw-bold">Jacque Haynes, CCIM | Senior Broker</h5>
+                        <small class="text-muted">MIDLAND ATLANTIC PROPERTIES</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+               <div class="swiper-slide">
+                  <div class="card h-100 border-0 shadow-sm p-4 transition-hover">
+                     <span class="border-left"></span>
+                     <span class="border-right"></span>
+                    <div class="card-body d-flex flex-column align-items-center text-center gap-3">
+                      <div class="rounded-circle overflow-hidden" style="width: 100px; height: 100px;">
+                        <img src="./assets/images/Testimonials/blank.jpg" alt="Sign Image" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+                      </div>
+                      <blockquote class="mb-3 fst-italic text-muted small">
+                        "I have worked with A Sign By Design for years as a retail shopping center owner/ developer and leasing agent. 
+                        I have used their services for signs at multiple shopping centers both for Tenant signage as well as pylon and or monument signs and 
+                        I have always been pleased with the results. Their project managers work out every detail and always go above and beyond expectations for 
+                        any and all signage needed. I have also recommended ASBD to multiple other shopping center owners and retail Tenants and never had a 
+                        complaint from anyone I recommended to them."
+                      </blockquote>
+                      <div>
+                        <h5 class="mb-0 fw-bold">Keith B. Fried, CRX, CLS</h5>
+                        <small class="text-muted">Senior Leasing Associate<br></small>
+                        <small class="text-muted">McCrea Property Group</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+               <div class="swiper-slide">
+                  <div class="card h-100 border-0 shadow-sm p-4 transition-hover">
+                     <span class="border-left"></span>
+                     <span class="border-right"></span>
+                    <div class="card-body d-flex flex-column align-items-center text-center gap-3">
+                      <div class="rounded-circle overflow-hidden" style="width: 100px; height: 100px;">
+                        <img src="./assets/images/Testimonials/blank.jpg" alt="Sign Image" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+                      </div>
+                      <blockquote class="mb-3 fst-italic text-muted small">
+                        "We have worked, over the many years, with A Sign by Design on multiple Verizon Wireless projects 
+                        and other in the Indianapolis and surrounding markets. They exemplify professionalism and attention to detail, 
+                        great communication and expectation setting for the client as well as fellow contractors. 
+                        A Sign by Design has a remarkable reputation in our community and in the numerous organizations 
+                        both our companies belong to. We can always count on them to participate, help and give whenever something is in need. 
+                        There’s not a day goes by that I don’t see a A Sign by Design truck or sign they installed in our community."
+                      </blockquote>
+                      <div>
+                        <h5 class="mb-0 fw-bold">Robert Kort</h5>
+                        <small class="text-muted">Kort Builders</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Testimonial 7 -->
+               <div class="swiper-slide">
+                  <div class="card h-100 border-0 shadow-sm p-4 transition-hover">
+                     <span class="border-left"></span>
+                     <span class="border-right"></span>
+                    <div class="card-body d-flex flex-column align-items-center text-center gap-3">
+                      <div class="rounded-circle overflow-hidden" style="width: 100px; height: 100px;">
+                        <img src="./assets/images/Testimonials/blank.jpg" alt="Sign Image" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+                      </div>
+                      <blockquote class="mb-3 fst-italic text-muted small">
+                        "The team at ASBD is fantastic! They are always professional, timely and deliver quality work that we know we can count on time and time again."
+                      </blockquote>
+                      <div>
+                        <h5 class="mb-0 fw-bold">Kelly Boyle</h5>
+                        <small class="text-muted">MIDLAND ATLANTIC PROPERTIES</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- Testimonial 8 -->
+               <div class="swiper-slide">
+                  <div class="card h-100 border-0 shadow-sm p-4 transition-hover">
+                     <span class="border-left"></span>
+                     <span class="border-right"></span>
+                    <div class="card-body d-flex flex-column align-items-center text-center gap-3">
+                      <div class="rounded-circle overflow-hidden" style="width: 100px; height: 100px;">
+                        <img src="./assets/images/Testimonials/blank.jpg" alt="Sign Image" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+                      </div>
+                      <blockquote class="mb-3 fst-italic text-muted small">
+                        "The team at Knauss Property Services has admired A Sign By Design for many years. 
+                        Their industry knowledge, work ethic, and impeccable track record make them a pleasure to refer 
+                        and to use for our business! When KPS moved into our new facility, we only trusted ASBD to construct our 
+                        monument sign, door sign, and window vinyl. We couldn’t be more pleased and proud of the work they did!"
+                      </blockquote>
+                      <div>
+                        <h5 class="mb-0 fw-bold">Matt Beauchamp</h5>
+                        <small class="text-muted">Brand Ambassador<br></small>
+                        <small class="text-muted">Knauss Property Services, LLC<br></small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               <!-- Add more testimonials the same way -->
+       
+             </div>
+       
+             <!-- Swiper Pagination -->
+             <div class="swiper-controls">
+               <div class="swiper-button-prev"></div>
+               <div class="swiper-pagination"></div>
+               <div class="swiper-button-next"></div>
+             </div>
+             
+           </div>
+         </div>
+       </section>
+
+    <!-- === Call to Action Form === -->
+          <!--Call to action start-->
+      <section class="py-5 bg-light-subtle" data-cue="fadeIn">
+         <div class="container my-lg-7" data-cues="zoomIn">
+            <div class="row justify-content-center text-center">
+               <div class="col-lg-6 col-md-9 col-12 d-flex flex-column gap-4">
+                  <div>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <path opacity="0.2" d="M42 18L27.2719 28.5H20.7281L6 18L24 6L42 18Z" fill="red" />
+                        <path
+                           d="M42.8325 16.7512L24.8325 4.75125C24.586 4.58679 24.2963 4.49902 24 4.49902C23.7037 4.49902 23.414 4.58679 23.1675 4.75125L5.1675 16.7512C4.96202 16.8883 4.79358 17.0741 4.67713 17.2919C4.56068 17.5098 4.49984 17.753 4.5 18V37.5C4.5 38.2956 4.81607 39.0587 5.37868 39.6213C5.94129 40.1839 6.70435 40.5 7.5 40.5H40.5C41.2957 40.5 42.0587 40.1839 42.6213 39.6213C43.1839 39.0587 43.5 38.2956 43.5 37.5V18C43.5002 17.753 43.4393 17.5098 43.3229 17.2919C43.2064 17.0741 43.038 16.8883 42.8325 16.7512ZM18.135 28.5L7.5 36V20.9119L18.135 28.5ZM21.2044 30H26.7956L37.4137 37.5H10.5862L21.2044 30ZM29.865 28.5L40.5 20.9119V36L29.865 28.5ZM24 7.80187L39.3581 18.0412L26.7956 27H21.2081L8.64563 18.0412L24 7.80187Z"
+                           fill="red" />
+                     </svg>
+                  </div>
+                  <div>
+                     <h2 class="fs-1">Start Your Project with Confidence</h2>
+                     <p class="mb-0">Reach out today and get a sign quoted for your business.</p>
+                  </div>
+                  <div>
+                     <form class="row g-2 d-flex mx-lg-7"
+                        action="./quote.html"
+                        method="get" novalidate>
+
+
+                        <div class="col-md-9 col-12">
+                           <label for="notificationEmail" class="visually-hidden"></label>
+                           <input type="email" id="notificationEmail" class="form-control" name="email"
+                              placeholder="Email" required="" />
+                           <div class="invalid-feedback text-start">Please enter a valid email address.</div>
+                        </div>
+                        <div class="col-md-3 col-12">
+                           <div class="d-grid">
+                              <button class="btn btn-dark" type="submit" name="subscribe">Get Quote</button>
+                           </div>
+                        </div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+                        <div style="position: absolute; left: -5000px" aria-hidden="true">
+                           <input class="subscription-form-antispam" type="text"
+                              name="b_b838b4eb099ebf09c3407db0f_b01fb647c7" tabindex="-1" />
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--Call to action end-->
+  </main>
+
+  <!-- Footer + Scripts -->
+  <!-- Footer -->
+<footer class="pt-7">
+   <div class="container">
+      <!-- Footer 4 column -->
+      <div class="row">
+         <div class="col-lg-9 col-12 mx-auto"> <!-- Centered this row -->
+            <div class="row" id="ft-links">
+               <div class="col-lg-3 col-12">
+                  <div>
+                     <div class="mb-3 pb-2 d-flex justify-content-between border-bottom border-bottom-lg-0">
+                        <h4>Service</h4>
+                        <a class="d-block d-lg-none text-body" data-bs-toggle="collapse" href="#collapseLanding" role="button" aria-expanded="false" aria-controls="collapseLanding">
+                           <i class="bi bi-chevron-down"></i>
+                        </a>
+                     </div>
+                     <div class="collapse d-lg-block" id="collapseLanding" data-bs-parent="#ft-links">
+                        <ul class="list-unstyled mb-0 py-3 py-lg-0">
+                           <li class="mb-2">
+                              <a href="./quote.html" class="text-decoration-none text-reset">Request Maintenance</a>
+                           </li>
+                           <li class="mb-2">
+                              <a href="./quote.html" class="text-decoration-none text-reset">Get Quote</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+   
+               <div class="col-lg-3 col-12">
+                  <div>
+                     <div class="mb-3 pb-2 d-flex justify-content-between border-bottom border-bottom-lg-0 position-relative">
+                        <h4>About us</h4>
+                        <a class="d-block d-lg-none text-body" data-bs-toggle="collapse" href="#collapseAccounts" role="button" aria-expanded="false" aria-controls="collapseAccounts">
+                           <i class="bi bi-chevron-down"></i>
+                        </a>
+                     </div>
+                     <div class="collapse d-lg-block" id="collapseAccounts" data-bs-parent="#ft-links">
+                        <ul class="list-unstyled mb-0 py-3 py-lg-0">
+                           <li class="mb-2">
+                              <a href="./about.html" class="text-decoration-none text-reset">About</a>
+                           </li>
+                           <li class="mb-2">
+                              <a href="./process.html" class="text-decoration-none text-reset">Process</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+   
+               <div class="col-lg-3 col-12">
+                  <div class="mb-3 pb-2 d-flex justify-content-between border-bottom border-bottom-lg-0 position-relative">
+                     <h4>Contact</h4>
+                     <a class="d-block d-lg-none text-body" data-bs-toggle="collapse" href="#collapseLocations" role="button" aria-expanded="false" aria-controls="collapseLocations">
+                        <i class="bi bi-chevron-down"></i>
+                     </a>
+                  </div>
+                  <div class="collapse d-lg-block" id="collapseLocations" data-bs-parent="#ft-links">
+                     <ul class="list-unstyled mb-0 py-3 py-lg-0">
+                        <li class="mb-2">
+                           <p class="text-body-secondary">317.876.7900 </p>
+                           <p class="text-body-secondary">sales@asignbydesign.com </p>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+   
+               <div class="col-lg-3 col-12">
+                  <div class="me-7">
+                     <h4 class="mb-4">Address</h4>
+                     <p class="text-body-secondary">501 W. Noble Street, Lebanon, IN 46052 </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+   <div class="container mt-7 pt-lg-7 pb-4">
+      <div class="row align-items-center">
+         <div class="col-md-3">
+            <a class="mb-4 mb-lg-0 d-block text-inverse" href="./index.html">
+               <img src="./assets/images/logo/asbd_logo.svg"
+                  alt="A Sign by Design Logo"
+                  style="max-height: 100px; height: 65px; " />
+            </a>
+         </div>
+         <div class="col-md-9 col-lg-6">
+            <div class="small mb-3 mb-lg-0 text-lg-center">
+               Copyright © 2025
+
+               <span class="text-primary"><a href="#">A Sign by Design</a></span>
+               | Designed by
+               <span class="text-primary"><a href="#">Tristan Kolat</a></span>
+            </div>
+         </div>
+         <div class="col-md-3">
+            <div class="text-md-end d-flex align-items-center justify-content-md-end">
+               <div class="dropdown">
+                  <button class="btn btn-light btn-icon rounded-circle d-flex align-items-center" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+                     <i class="bi theme-icon-active lh-1"></i>
+                     <span class="visually-hidden bs-theme-text">Toggle theme</span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bs-theme-text">
+                     <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                           <i class="bi theme-icon bi-sun-fill"></i>
+                           <span class="ms-2">Light</span>
+                        </button>
+                     </li>
+                     <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                           <i class="bi theme-icon bi-moon-stars-fill"></i>
+                           <span class="ms-2">Dark</span>
+                        </button>
+                     </li>
+                     <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                           <i class="bi theme-icon bi-circle-half"></i>
+                           <span class="ms-2">Auto</span>
+                        </button>
+                     </li>
+                  </ul>
+               </div>
+               <div class="ms-3 d-flex gap-2">
+                  <a href="https://www.facebook.com/p/A-Sign-by-Design-100057455106200/" class="btn btn-facebook btn-icon" target="_blank" rel="noopener">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path
+                           d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                     </svg>
+                  </a>
+
+                  <a href="https://www.linkedin.com/company/a-sign-by-design_2" class="btn btn-linkedin btn-icon" target="_blank" rel="noopener">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                       <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.213c.837 0 1.358-.554 1.358-1.248-.015-.71-.521-1.248-1.342-1.248-.822 0-1.359.538-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zM13.458 13.394v-3.987c0-2.13-1.137-3.121-2.653-3.121-1.223 0-1.77.672-2.078 1.145v-0.982H6.327c.03.651 0 7.225 0 7.225h2.401v-4.035c0-.216.016-.432.08-.586.173-.432.567-.88 1.23-.88.868 0 1.215.665 1.215 1.64v3.861h2.205z"/>
+                     </svg>
+                   </a>
+                   
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+
+  <div class="btn-scroll-top">
+   <svg class="progress-square svg-content" width="100%" height="100%" viewBox="0 0 40 40">
+      <path d="M8 1H32C35.866 1 39 4.13401 39 8V32C39 35.866 35.866 39 32 39H8C4.13401 39 1 35.866 1 32V8C1 4.13401 4.13401 1 8 1Z" />
+   </svg>
+</div>
+
+  <!-- Libs JS -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./node_modules/simplebar/dist/simplebar.min.js"></script>
+<script src="./node_modules/headhesive/dist/headhesive.min.js"></script>
+
+<!-- Theme JS -->
+<!-- build:js ./assets/js/theme.min.js -->
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/vendors/offcanvas.js"></script>
+<script src="./assets/js/vendors/navbar.js"></script>
+<!-- endbuild -->
+
+
+  <!-- === External Libraries === -->
+  <script src="./node_modules/scrollcue/scrollCue.min.js"></script>
+  <script src="./assets/js/vendors/scrollcue.js"></script>
+  <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+  <script src="./assets/js/vendors/swiper.js"></script>
+
+  <!-- === Shuffle Home Marquee Images === -->
+  <script>
+    function shuffleChildren(container) {
+      const children = Array.from(container.children);
+      for (let i = children.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [children[i], children[j]] = [children[j], children[i]];
+      }
+      children.forEach(child => container.appendChild(child));
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      shuffleChildren(document.querySelector(".track"));
+      shuffleChildren(document.querySelector(".track-2"));
+    });
+  </script>
+
+  <!-- === Swiper Slider (Testimonials) === -->
+  <script>
+    const testimonialSwiper = new Swiper('.testimonial-swiper', {
+      loop: true,
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      spaceBetween: 40,
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 150,
+        modifier: 2,
+        slideShadows: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+
+    const swiperContainer = document.querySelector('.testimonial-swiper');
+    swiperContainer.addEventListener('mouseenter', () => testimonialSwiper.autoplay.stop());
+    swiperContainer.addEventListener('mouseleave', () => testimonialSwiper.autoplay.start());
+  </script>
+
+  <!-- === Email Validation for All Forms === -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const forms = document.querySelectorAll("form");
+
+      forms.forEach(form => {
+        form.addEventListener("submit", function (e) {
+          const emailInput = form.querySelector("input[type='email']");
+          const email = emailInput?.value.trim();
+          const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+          const feedback = emailInput?.closest('div')?.querySelector('.invalid-feedback');
+
+          if (!isValid) {
+            e.preventDefault();
+            emailInput.classList.add("is-invalid");
+            if (feedback) feedback.textContent = "Please enter a valid email address.";
+            emailInput.focus();
+          } else {
+            emailInput.classList.remove("is-invalid");
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

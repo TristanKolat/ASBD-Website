@@ -1,8 +1,38 @@
 <!doctype html>
 <html lang="en">
   <head>
-    @@include("partials/head/meta.html")
-    @@include("partials/head/head-links.html")
+    <!-- Required meta tags -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Favicon icon-->
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+<link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+<link rel="mask-icon" href="./assets/images/favicon/block-safari-pinned-tab.svg" color="#8b3dff" />
+<link rel="shortcut icon" href="./assets/images/favicon/favicon.ico" />
+<meta name="msapplication-TileColor" content="#8b3dff" />
+<meta name="msapplication-config" content="./assets/images/favicon/tile.xml" />
+
+<!-- Color modes -->
+<script src="./assets/js/vendors/color-modes.js"></script>
+
+<!-- Libs CSS -->
+<link href="./node_modules/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+<link href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+<!-- Scroll Cue -->
+<link rel="stylesheet" href="./node_modules/scrollcue/scrollCue.css" />
+
+<!-- Box icons -->
+<link rel="stylesheet" href="./assets/fonts/css/boxicons.min.css" />
+
+<!-- Theme CSS -->
+<!-- build:css ./assets/css/theme.min.css -->
+<link rel="stylesheet" id="theme-stylesheet" href="./assets/css/theme.css" />
+<!-- endbuild -->
+
     <title>Get a Quote - A Sign by Design</title>
   </head>
 
@@ -141,7 +171,18 @@
     </main>
 
     <!-- Scripts -->
-    @@include("partials/scripts.html")
+    <!-- Libs JS -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./node_modules/simplebar/dist/simplebar.min.js"></script>
+<script src="./node_modules/headhesive/dist/headhesive.min.js"></script>
+
+<!-- Theme JS -->
+<!-- build:js ./assets/js/theme.min.js -->
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/vendors/offcanvas.js"></script>
+<script src="./assets/js/vendors/navbar.js"></script>
+<!-- endbuild -->
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Prefill Email from ?email= in URL -->

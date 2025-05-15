@@ -10,7 +10,7 @@
     @@include("partials/navbar.html", { "classList": "navbar-light w-100" })
 
     <main>
-      <!-- Page header -->
+      <!-- === Page Header === -->
       <section class="py-5 py-lg-8">
         <div class="text-center mb-4">
           <h2 class="display-5 fw-bold">About ASBD</h2>
@@ -18,27 +18,28 @@
         </div>
       </section>
 
-      <section class="mb-xl-9">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="mb-6">
-                     <h1 class="mb-0">A Quality Sign Says It All</h1>
-                  </div>
-               </div>
-            </div>
-
-      <!-- About / Contact / Image Section -->
+      <!-- === Contact & Story Section === -->
       <section class="mb-xl-9">
         <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="mb-6">
+                <h1 class="mb-0">A Quality Sign Says It All</h1>
+              </div>
+            </div>
+          </div>
+
           <div class="row align-items-center gy-5">
+            <!-- Owner Image -->
             <div class="col-lg-7 col-md-12">
               <img src="./assets/images/Home_Priority/1.jpg" class="img-fluid rounded-3 shadow-sm" alt="Owner-ASBD" />
             </div>
+
+            <!-- Contact Info -->
             <div class="col-lg-5 col-md-12">
               <!-- Location -->
               <div class="d-flex mb-4">
-                <div class="icon-md icon-shape rounded-circle bg-body-tertiary bg-opacity-50 border flex-shrink-0 d-flex align-items-center justify-content-center">
+                <div class="icon-md icon-shape rounded-circle bg-body-tertiary bg-opacity-50 border d-flex align-items-center justify-content-center">
                   <i class="bi bi-geo-alt-fill"></i>
                 </div>
                 <div class="ms-3">
@@ -49,7 +50,7 @@
 
               <!-- Business Hours -->
               <div class="d-flex border-top pt-4 mb-4">
-                <div class="icon-md icon-shape rounded-circle bg-body-tertiary bg-opacity-50 border flex-shrink-0 d-flex align-items-center justify-content-center">
+                <div class="icon-md icon-shape rounded-circle bg-body-tertiary bg-opacity-50 border d-flex align-items-center justify-content-center">
                   <i class="bi bi-window-dock"></i>
                 </div>
                 <div class="ms-3">
@@ -58,9 +59,9 @@
                 </div>
               </div>
 
-              <!-- Contact -->
+              <!-- Contact Methods -->
               <div class="d-flex border-top pt-4">
-                <div class="icon-md icon-shape rounded-circle bg-body-tertiary bg-opacity-50 border flex-shrink-0 d-flex align-items-center justify-content-center">
+                <div class="icon-md icon-shape rounded-circle bg-body-tertiary bg-opacity-50 border d-flex align-items-center justify-content-center">
                   <i class="bi bi-envelope-fill"></i>
                 </div>
                 <div class="ms-3">
@@ -72,7 +73,7 @@
             </div>
           </div>
 
-          <!-- About Company Story -->
+          <!-- === Company Story === -->
           <div class="row mt-7">
             <div class="col-lg-7 col-md-12">
               <div class="mb-6 mt-4">
@@ -89,13 +90,12 @@
                   In over 23 years of operation, A Sign By Design signs have landscaped the city of Indianapolis. They identify the products and services that you use on a daily basis. At the airport, the RCA sign “Welcomes You to Indianapolis.” The Community Hospital sign directs you to the emergency room or to your doctor’s office. Your view from your seat at Victory Field provides an illuminated roster of our clients; Courtyard by Marriott, Duke Realty, the Hoosier Lottery and Key Bank.
                   <br><br>
                   We have expanded our operations by manufacturing and installing signs across the country as far as California. Lincoln Technical Institute, Verizon Wireless as well as Amazon Fulfillment signs appear in over 15 states.
-                  <br><br>
                 </p>
                 <p class="mb-0">And it all began in a spare room with a telephone and a fax machine and a desire to succeed.</p>
               </div>
             </div>
 
-            <!-- Quote Form -->
+            <!-- === Contact Form === -->
             <div class="col-lg-4 offset-lg-1 col-md-12">
               <div class="card shadow-sm">
                 <div class="card-body">
@@ -105,34 +105,39 @@
 
                   <form class="needs-validation mb-4"
                         action="https://formsubmit.co/sales@asignbydesign.com"
-                        method="POST"
-                        novalidate>
+                        method="POST" novalidate>
 
+                    <!-- Anti-spam hidden fields -->
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_next" value="https://asignbydesign.com/thank-you.html">
                     <input type="text" name="_honey" style="display:none">
 
+                    <!-- Full Name -->
                     <div class="mb-3">
                       <label for="quoteFullName" class="form-label">Full Name <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="quoteFullName" name="name" required />
                     </div>
 
+                    <!-- Company Name -->
                     <div class="mb-3">
                       <label for="quoteCompany" class="form-label">Company Name <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="quoteCompany" name="company" required />
                     </div>
 
+                    <!-- Email -->
                     <div class="mb-3">
                       <label for="quoteEmail" class="form-label">Email <span class="text-danger">*</span></label>
                       <input type="email" class="form-control" id="quoteEmail" name="email" required />
                     </div>
 
+                    <!-- Phone -->
                     <div class="mb-3">
                       <label for="quotePhone" class="form-label">Phone Number (optional)</label>
                       <input type="tel" class="form-control" id="quotePhone" name="phone" />
                     </div>
 
+                    <!-- Sign Type -->
                     <div class="mb-3">
                       <label for="quoteType" class="form-label">Type of Sign Needed <span class="text-danger">*</span></label>
                       <select class="form-select" id="quoteType" name="sign_type" required>
@@ -148,6 +153,7 @@
                       </select>
                     </div>
 
+                    <!-- Project Details -->
                     <div class="mb-3">
                       <label for="quoteDetails" class="form-label">Project Details (optional)</label>
                       <textarea class="form-control" id="quoteDetails" name="message" rows="4"
@@ -159,6 +165,7 @@
                       <div class="g-recaptcha" data-sitekey="your_site_key_here"></div>
                     </div>
 
+                    <!-- Submit Button -->
                     <div class="d-grid">
                       <button class="btn btn-primary" type="submit">Submit Quote Request</button>
                     </div>
@@ -166,7 +173,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> <!-- End row -->
         </div>
       </section>
     </main>
@@ -175,27 +182,27 @@
     @@include("partials/scripts.html")
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+    <!-- Email validation (basic format check) -->
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const forms = document.querySelectorAll("form");
+      document.addEventListener("DOMContentLoaded", function () {
+        const forms = document.querySelectorAll("form");
 
-    forms.forEach(form => {
-      form.addEventListener("submit", function (e) {
-        const emailInput = form.querySelector("input[type='email']");
-        const email = emailInput?.value.trim();
-        const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        forms.forEach(form => {
+          form.addEventListener("submit", function (e) {
+            const emailInput = form.querySelector("input[type='email']");
+            const email = emailInput?.value.trim();
+            const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-        if (!isValid) {
-          e.preventDefault();
-          emailInput.classList.add("is-invalid");
-          emailInput.focus();
-        } else {
-          emailInput.classList.remove("is-invalid");
-        }
+            if (!isValid) {
+              e.preventDefault();
+              emailInput.classList.add("is-invalid");
+              emailInput.focus();
+            } else {
+              emailInput.classList.remove("is-invalid");
+            }
+          });
+        });
       });
-    });
-  });
-</script>
-
+    </script>
   </body>
 </html>
