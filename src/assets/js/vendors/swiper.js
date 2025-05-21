@@ -1,3 +1,5 @@
+/*
+
 function initializeSwiperCarousels() {
    const swiperContainers = document.querySelectorAll(".swiper-container");
 
@@ -94,3 +96,4 @@ function initializeSwiperCarousels() {
 }
 
 initializeSwiperCarousels();
+*/

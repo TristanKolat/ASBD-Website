@@ -1,6 +1,6 @@
 # 📁 Project Overview – A Sign by Design Website
 
-This repository contains the source code for the official website of **A Sign by Design**, a custom signage company based in Illinois. I was contracted as the **sole web developer** to design and build a modern, responsive site that effectively showcases their portfolio, services, and contact information.
+This repository contains the source code for the official website of **A Sign by Design**, a custom signage company based in Indiana. I was contracted as the **sole web developer** to design and build a modern, responsive site that effectively showcases their portfolio, services, and contact information.
 
 ## 🎯 Objective
 
