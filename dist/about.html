@@ -5,6 +5,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+<html lang="en" data-bs-theme="dark">
+
     <!-- Favicon icon-->
 <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo/asbd_logo.svg" />
@@ -14,9 +16,6 @@
 <link rel="shortcut icon" href="./assets/images/favicon/favicon.ico" />
 <meta name="msapplication-TileColor" content="#8b3dff" />
 <meta name="msapplication-config" content="./assets/images/favicon/tile.xml" />
-
-<!-- Color modes -->
-<script src="./assets/js/vendors/color-modes.js"></script>
 
 <!-- Libs CSS -->
 <link href="./assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
@@ -41,8 +40,8 @@
     <div class="container px-3">
 
       <!-- Logo (desktop and mobile) -->
-      <a class="navbar-brand d-flex align-items-center" href="./index.html">
-        <img src="./assets/images/logo/ASBD Logo1.svg" alt="A Sign by Design Logo" style="max-height: 150px; height: 65px;" />
+      <a class="navbar-bran d-flex align-items-center" href="./index.html">
+        <img src="./assets/images/logo/ASBD_Logo_grey.svg" alt="A Sign by Design Logo" style="max-height: 150px; height: 65px;" />
       </a>
 
       <!-- Mobile Toggle Button -->
@@ -55,8 +54,8 @@
 
         <!-- Offcanvas Header (mobile) -->
         <div class="offcanvas-header">
-          <a href="./index.html" class="text-inverse">
-            <img src="./assets/images/logo/ASBD Logo1.svg" alt="A Sign by Design Logo" style="max-height: 150px; height: 65px;" />
+          <a href="./index.html">
+            <img src="./assets/images/logo/ASBD_Logo_grey.svg" alt="A Sign by Design Logo" style="max-height: 150px; height: 65px;" />
           </a>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -309,8 +308,53 @@
     </main>
 
     <!-- === Footer Section === -->
+
+
+<!-- Sponsor Logos Section -->
+<section class="py-5 bg-light-subtle border-top">
+  <div class="container text-center">
+    <h5 class="mb-4 fw-semibold">Proudly partnered with</h5>
+    <div class="row justify-content-center align-items-center g-4">
+      <div class="col-6 col-md-2">
+        <a href="https://www.boma.org/" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/images/sponsors/boma.svg" class="img-fluid" alt="Boma Logo">
+        </a>
+      </div>
+      <div class="col-6 col-md-2">
+        <a href="https://www.ifma.org/" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/images/sponsors/ifma.svg" class="img-fluid" alt="IFMA Logo">
+        </a>
+      </div>
+      <div class="col-6 col-md-2">
+        <a href="https://indycrew.org/" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/images/sponsors/indycrew.svg" class="img-fluid" alt="Indy Crew Logo">
+        </a>
+      </div>
+      <div class="col-6 col-md-2">
+        <a href="https://www.indyreal.biz" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/images/sponsors/indyreal.svg" class="img-fluid" style="filter: invert(1);" alt="Indy Real Estate Logo">
+        </a>
+      </div>
+      <div class="col-6 col-md-2">
+        <a href="https://www.irem.org/" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/images/sponsors/irem.svg" class="img-fluid" alt="IREM Logo">
+        </a>
+      </div>
+      <div class="col-6 col-md-2">
+        <a href="https://www.nawbo.org/" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/images/sponsors/nawbo.svg" class="img-fluid" alt="NAWBO Logo">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <footer class="pt-7">
   <div class="container">
+
+    
 
     <!-- === Footer Grid: 4 Columns (Service, About Us, Contact, Address) === -->
     <div class="row">
@@ -394,8 +438,8 @@
 
       <!-- === Company Logo === -->
       <div class="col-md-3">
-        <a class="mb-4 mb-lg-0 d-block text-inverse" href="./index.html">
-          <img src="./assets/images/logo/asbd_logo.svg" alt="A Sign by Design Logo" style="max-height: 100px; height: 65px;" />
+        <a class="mb-4 mb-lg-0 d-block " href="./index.html">
+          <img src="./assets/images/logo/ASBD_Logo_grey.svg" alt="A Sign by Design Logo" style="max-height: 200px; height: 100px;" />
         </a>
       </div>
 
@@ -411,19 +455,6 @@
       <!-- === Theme Toggle and Social Icons === -->
       <div class="col-md-3">
         <div class="text-md-end d-flex align-items-center justify-content-md-end">
-
-          <!-- === Theme Toggle Dropdown === -->
-          <div class="dropdown">
-            <button class="btn btn-light btn-icon rounded-circle d-flex align-items-center" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-              <i class="bi theme-icon-active lh-1"></i>
-              <span class="visually-hidden bs-theme-text">Toggle theme</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bs-theme-text">
-              <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"><i class="bi theme-icon bi-sun-fill"></i><span class="ms-2">Light</span></button></li>
-              <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false"><i class="bi theme-icon bi-moon-stars-fill"></i><span class="ms-2">Dark</span></button></li>
-              <li><button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true"><i class="bi theme-icon bi-circle-half"></i><span class="ms-2">Auto</span></button></li>
-            </ul>
-          </div>
 
           <!-- === Social Media Links === -->
           <div class="ms-3 d-flex gap-2">
