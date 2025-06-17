@@ -209,7 +209,6 @@ h1.display-5 {
   color: var(--text-color, #fff);
   text-shadow: 3px 3px 0 #000, 6px 6px 0 #333;
   -webkit-text-stroke: 1px #000;
-  text-stroke: 1px #000;
   position: relative;
   display: inline-block;
 }
@@ -465,6 +464,68 @@ img.fade-out {
   font-size: 1.05rem;
   line-height: 1.8;
 }
+
+// Ensure the navbar container spaces items properly
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+// Center the nav links on large screens
+.offcanvas-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0.5rem 0.75rem;
+    transition: color 0.2s ease;
+
+    &.active {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 0.5rem;
+      color: #fff;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .d-flex.align-items-center.gap-3 {
+    flex-wrap: nowrap;
+    gap: 1rem;
+
+    .btn-primary {
+      padding: 0.5rem 1.25rem;
+      font-weight: 600;
+    }
+
+    .d-flex.flex-column.small.ms-3 {
+      a {
+        color: rgba(255, 255, 255, 0.75);
+        text-decoration: none;
+
+        &:hover {
+          color: #dc3545;
+        }
+      }
+    }
+  }
+}
+
 
 
 

@@ -19,17 +19,19 @@
 <meta name="msapplication-config" content="./assets/images/favicon/tile.xml" />
 
 <!-- Libs CSS -->
-<link href="./assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
-<link href="./assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+<link href="./node_modules/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+<link href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
 
 <!-- Scroll Cue -->
-<link rel="stylesheet" href="./assets/libs/scrollcue/scrollCue.css" />
+<link rel="stylesheet" href="./node_modules/scrollcue/scrollCue.css" />
 
 <!-- Box icons -->
 <link rel="stylesheet" href="./assets/fonts/css/boxicons.min.css" />
 
 <!-- Theme CSS -->
-<link rel="stylesheet" href="./assets/css/theme.min.css">
+<!-- build:css ./assets/css/theme.min.css -->
+<link rel="stylesheet" id="theme-stylesheet" href="./assets/css/theme.css" />
+<!-- endbuild -->
 
   <title>ASBD | Portfolio</title>
 
@@ -317,7 +319,7 @@
               <h4 class="mb-4">Address</h4>
               <a href="https://www.google.com/maps?q=501+W+Noble+Street,+Lebanon,+IN+46052"
                 target="_blank"
-                class="text-decoration-none hover-red d-inline-block">
+                class="text-decoration-none hover-red text-body-secondary d-inline-block">
                 501 W. Noble Street, Lebanon, IN 46052
               </a>
 
@@ -383,12 +385,16 @@
 </div>
 
   <!-- Libs JS -->
-<script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./assets/libs/simplebar/dist/simplebar.min.js"></script>
-<script src="./assets/libs/headhesive/dist/headhesive.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./node_modules/simplebar/dist/simplebar.min.js"></script>
+<script src="./node_modules/headhesive/dist/headhesive.min.js"></script>
 
 <!-- Theme JS -->
-<script src="./assets/js/theme.min.js"></script>
+<!-- build:js ./assets/js/theme.min.js -->
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/vendors/offcanvas.js"></script>
+<script src="./assets/js/vendors/navbar.js"></script>
+<!-- endbuild -->
 
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
