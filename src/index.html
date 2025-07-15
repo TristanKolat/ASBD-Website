@@ -45,14 +45,14 @@
     <!-- === Scrolling Image Marquees === -->
     @@include("partials/home/marquee.html")
 
-    <!-- === Gallery Categories === -->
-    @@include("partials/home/gallery-links.html")
-
     <!-- === Company Mission Statement === -->
     @@include("partials/home/mission.html")
 
     <!-- === Process Steps === -->
     @@include("partials/home/process-home.html")
+
+    <!-- === Gallery Categories === -->
+    @@include("partials/home/gallery-links.html")
 
     <!-- === Testimonials === -->
     @@include("partials/home/testimonials.html")
@@ -149,43 +149,6 @@
 
   document.addEventListener("DOMContentLoaded", loadMarqueeImages);
 </script>
-
-
-
-  <!-- === Swiper Slider (Testimonials) === -->
-  <script>
-    const testimonialSwiper = new Swiper('.testimonial-swiper', {
-      loop: true,
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      spaceBetween: 40,
-      effect: 'coverflow',
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 150,
-        modifier: 2,
-        slideShadows: false
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      }
-    });
-
-    const swiperContainer = document.querySelector('.testimonial-swiper');
-    swiperContainer.addEventListener('mouseenter', () => testimonialSwiper.autoplay.stop());
-    swiperContainer.addEventListener('mouseleave', () => testimonialSwiper.autoplay.start());
-  </script>
 
   <!-- === Email Validation for All Forms === -->
   <script>
