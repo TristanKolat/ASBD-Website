@@ -28,3 +28,35 @@ function toggleOffCanvas() {
         bsOffCanvas.show();
     }
 }
+
+//function to make sure all clones of off canvas are dismissed when pressing 'x'
+document.querySelectorAll('.btn-close[data-bs-dismiss="offcanvas"]').forEach(button => {
+  button.addEventListener('click', () => {
+    const offcanvasElements = document.querySelectorAll('.offcanvas');
+
+    offcanvasElements.forEach(el => {
+      const instance = bootstrap.Offcanvas.getInstance(el);
+      if (instance) {
+        instance.hide(); // cleanly closes
+      } else {
+        const newInstance = new bootstrap.Offcanvas(el);
+        newInstance.hide();
+      }
+    });
+  });
+});
+
+//function to make sure all clones of off canvas are dismissed when tapping outside pane
+document.querySelectorAll('.offcanvas').forEach(el => {
+  el.addEventListener('hide.bs.offcanvas', () => {
+    // Close ALL offcanvas instances cleanly
+    document.querySelectorAll('.offcanvas').forEach(otherEl => {
+      const instance = bootstrap.Offcanvas.getInstance(otherEl);
+      if (instance && instance._isShown) {
+        instance.hide();
+      }
+    });
+  });
+});
+
+
