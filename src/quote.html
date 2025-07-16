@@ -35,7 +35,8 @@
                 <div class="card-body">
                   <form class="needs-validation mb-4"
                         action="https://formsubmit.co/sales@asignbydesign.com"
-                        method="POST" novalidate>
+                        method="POST"
+                        enctype="multipart/form-data" novalidate>
 
                     <!-- Anti-Spam Hidden Fields -->
                     <input type="hidden" name="_captcha" value="false">
@@ -87,11 +88,17 @@
                       <div class="invalid-feedback">Please select a sign type.</div>
                     </div>
 
+                    <div class="mb-3">
+                      <label for="fileUpload" class="form-label">Upload files</label>
+                      <input type="file" class="form-control" id="fileUpload" name="attachments[]" accept=".pdf,.jpg,.jpeg,.png" multiple>
+                    </div>
+
+
                     <!-- Project Details -->
                     <div class="mb-3">
                       <label for="quoteDetails" class="form-label">Project Details (optional)</label>
                       <textarea class="form-control" id="quoteDetails" name="message" rows="5"
-                                placeholder="Tell us about the location, size, timeline, and any other info..."></textarea>
+                                placeholder="Tell us about the location, size, timeline, or any other info..."></textarea>
                     </div>
 
                     <!-- reCAPTCHA -->
