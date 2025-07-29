@@ -10,20 +10,6 @@
 <body>
   <!-- Navbar -->
   @@include("partials/navbar.html", { "classList": "navbar-dark w-100" })
-
-  <!-- === Gallery Tab Reset Fix === -->
-  <script>
-    document.querySelectorAll('a.dropdown-item[href^="gallery.html#"]').forEach(link => {
-      link.addEventListener('click', function () {
-        this.blur();
-        setTimeout(() => {
-          if (window.location.pathname.includes('index.html')) {
-            history.replaceState(null, "", window.location.pathname);
-          }
-        }, 1000);
-      });
-    });
-  </script>
   <main>
 
     <div class="d-lg-none" style="height: 10vh;"></div>
@@ -73,109 +59,6 @@
   <script src="@@webRoot/assets/js/vendors/scrollcue.js"></script>
   <script src="@@webRoot/node_modules/swiper/swiper-bundle.min.js"></script>
   <script src="@@webRoot/assets/js/vendors/swiper.js"></script>
-
-  <!-- === Shuffle Home Marquee Images === -->
-<script>
-  async function loadMarqueeImages() {
-    const res = await fetch('./assets/data/images.json');
-    const data = await res.json();
-
-    // Shuffle home_priority
-    const homePriority = (data["home_priority"] || [])
-      .map(file => `./assets/images/home_priority/${file}`)
-      .sort(() => Math.random() - 0.5);
-
-    // Shuffle all other images
-    const otherImages = Object.entries(data)
-      .filter(([key]) => key !== "home_priority")
-      .flatMap(([folder, files]) =>
-        files.map(file => `./assets/images/${folder.charAt(0).toUpperCase() + folder.slice(1)}/${file}`)
-      ).sort(() => Math.random() - 0.5);
-
-    const used = new Set();
-    const topTrack = document.querySelector('.track');
-    const bottomTrack = document.querySelector('.track-2');
-
-    function getUnique(pool) {
-      while (pool.length) {
-        const img = pool.pop();
-        if (!used.has(img)) {
-          used.add(img);
-          return img;
-        }
-      }
-      return null;
-    }
-
-    function createImgBox(src, parent, fallbackPool) {
-      const img = new Image();
-      img.src = src;
-
-      img.onload = () => {
-        const ratio = img.naturalWidth / img.naturalHeight;
-        if (ratio < 0.8 || ratio > 1.8) {
-          const fallback = getUnique(fallbackPool);
-          if (fallback) createImgBox(fallback, parent, fallbackPool);
-          return;
-        }
-
-        const box = document.createElement('div');
-        box.className = 'custom-img-box';
-        img.alt = 'Image';
-        img.className = 'img-cover border';
-        box.appendChild(img);
-        parent.appendChild(box);
-      };
-
-      img.onerror = () => {
-        const fallback = getUnique(fallbackPool);
-        if (fallback) createImgBox(fallback, parent, fallbackPool);
-      };
-    }
-
-    const total = 20;
-    let track = [topTrack, bottomTrack];
-    let trackIndex = 0;
-
-    for (let i = 0; i < total / 2; i++) {
-      const prioritySrc = getUnique(homePriority);
-      const fallbackSrc = getUnique(otherImages);
-
-      if (prioritySrc) createImgBox(prioritySrc, track[trackIndex % 2], otherImages);
-      trackIndex++;
-
-      if (fallbackSrc) createImgBox(fallbackSrc, track[trackIndex % 2], otherImages);
-      trackIndex++;
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", loadMarqueeImages);
-</script>
-
-  <!-- === Email Validation for All Forms === -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const forms = document.querySelectorAll("form");
-
-      forms.forEach(form => {
-        form.addEventListener("submit", function (e) {
-          const emailInput = form.querySelector("input[type='email']");
-          const email = emailInput?.value.trim();
-          const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-          const feedback = emailInput?.closest('div')?.querySelector('.invalid-feedback');
-
-          if (!isValid) {
-            e.preventDefault();
-            emailInput.classList.add("is-invalid");
-            if (feedback) feedback.textContent = "Please enter a valid email address.";
-            emailInput.focus();
-          } else {
-            emailInput.classList.remove("is-invalid");
-          }
-        });
-      });
-    });
-  </script>
 
 </body>
 
