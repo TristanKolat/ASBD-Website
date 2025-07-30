@@ -315,7 +315,6 @@ theme.init();
     });
 
 
-
  // <!-- === Gallery Tab Reset Fix === -->
     document.querySelectorAll('a.dropdown-item[href^="gallery.html#"]').forEach(link => {
       link.addEventListener('click', function () {

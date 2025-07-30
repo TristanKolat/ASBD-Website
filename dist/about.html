@@ -515,28 +515,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    <!-- Email validation (basic format check) -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const forms = document.querySelectorAll("form");
 
-        forms.forEach(form => {
-          form.addEventListener("submit", function (e) {
-            const emailInput = form.querySelector("input[type='email']");
-            const email = emailInput?.value.trim();
-            const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-            if (!isValid) {
-              e.preventDefault();
-              emailInput.classList.add("is-invalid");
-              emailInput.focus();
-            } else {
-              emailInput.classList.remove("is-invalid");
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>
 
