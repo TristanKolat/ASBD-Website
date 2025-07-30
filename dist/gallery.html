@@ -395,67 +395,7 @@
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-  <!-- Load and Inject Images by Category -->
-  <script>
-    const folderMap = {
-      awnings: 'Awnings',
-      channel: 'Channel Letters',
-      custom: 'Custom',
-      graphics: 'Graphics',
-      interior: 'Interior',
-      monuments: 'Monuments',
-      pylons: 'Pylons',
-      wayfinding: 'Wayfinding'
-    };
 
-    fetch('./assets/data/images.json')
-      .then(res => res.json())
-      .then(imageData => {
-        const allGallery = document.getElementById('all-gallery');
-        const allImages = [];
-
-        // Load images for each category tab
-        Object.entries(imageData).forEach(([category, images]) => {
-          const container = document.querySelector(`[data-gallery="${category}"]`);
-          const displayCategory = folderMap[category] || category;
-          if (!container) return;
-
-          const shuffled = images.sort(() => 0.5 - Math.random()).slice(0, 48);
-
-          shuffled.forEach(img => {
-            const imagePath = `./assets/images/${displayCategory}/${img}`;
-            const item = document.createElement('div');
-            item.className = 'masonry-item';
-            item.innerHTML = `<img src="${imagePath}" alt="${category}" loading="lazy">`;
-            container.appendChild(item);
-            allImages.push({ path: imagePath, category });
-          });
-        });
-
-        // Load a combined shuffled preview for the All tab
-        const shuffledAll = allImages.sort(() => 0.5 - Math.random()).slice(0, 48);
-        shuffledAll.forEach(({ path, category }) => {
-          const item = document.createElement('div');
-          item.className = 'masonry-item';
-          item.innerHTML = `<img src="${path}" alt="${category}" loading="lazy">`;
-          allGallery.appendChild(item);
-        });
-      });
-  </script>
-
-  <!-- Tab Switching from URL Hash (e.g. #awnings) -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const hash = window.location.hash;
-      if (hash) {
-        const tabTrigger = document.querySelector(`button[data-bs-target="${hash}"]`);
-        if (tabTrigger) {
-          const tab = new bootstrap.Tab(tabTrigger);
-          tab.show();
-        }
-      }
-    });
-  </script>
 </body>
 
 </html>
