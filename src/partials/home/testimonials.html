@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Testimonial Slider</title>
-
-  <!-- Swiper CSS -->
+<!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   <style>
@@ -138,8 +131,6 @@
   }
 }
   </style>
-</head>
-<body>
   <section class="testimonial-section">
   <div class="swiper testimonial-slider">
     <div class="swiper-wrapper">
@@ -288,60 +279,3 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  const swiper = new Swiper('.testimonial-slider', {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 10
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 15
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    },
-    grabCursor: true,
-    effect: 'slide',
-    speed: 500,
-    autoHeight: false,
-    on: {
-      init: setEqualCardHeights,
-      resize: setEqualCardHeights,
-      slideChange: setEqualCardHeights
-    }
-  });
-
-  function setEqualCardHeights() {
-    const cards = document.querySelectorAll('.testimonial-card');
-    let maxHeight = 0;
-    cards.forEach(card => {
-      card.style.height = 'auto';
-      maxHeight = Math.max(maxHeight, card.offsetHeight);
-    });
-    cards.forEach(card => {
-      card.style.height = `${maxHeight}px`;
-    });
-  }
-</script>
-</body>
-</html>

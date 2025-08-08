@@ -386,3 +386,58 @@ theme.init();
       }
     });
 
+    //testimonial code
+
+      const swiper = new Swiper('.testimonial-slider', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 15
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
+    },
+    grabCursor: true,
+    effect: 'slide',
+    speed: 500,
+    autoHeight: false,
+    on: {
+      init: setEqualCardHeights,
+      resize: setEqualCardHeights,
+      slideChange: setEqualCardHeights
+    }
+  });
+
+  function setEqualCardHeights() {
+    const cards = document.querySelectorAll('.testimonial-card');
+    let maxHeight = 0;
+    cards.forEach(card => {
+      card.style.height = 'auto';
+      maxHeight = Math.max(maxHeight, card.offsetHeight);
+    });
+    cards.forEach(card => {
+      card.style.height = `${maxHeight}px`;
+    });
+  }
+
